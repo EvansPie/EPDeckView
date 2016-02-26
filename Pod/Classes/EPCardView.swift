@@ -55,7 +55,7 @@ public class EPCardView: UIView {
     private func removeAllGestureRecognizers() {
         if self.gestureRecognizers != nil {
             for gesture in self.gestureRecognizers! {
-                self.removeGestureRecognizer(gesture as! UIGestureRecognizer)
+                self.removeGestureRecognizer(gesture)
             }
         }
     }

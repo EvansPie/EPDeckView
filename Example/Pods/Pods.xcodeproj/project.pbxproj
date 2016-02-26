@@ -7,43 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		157D8E7E1C80DCEA00445F32 /* EPDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D8E7A1C80DCEA00445F32 /* EPDeckView.swift */; };
-		157D8E7F1C80DCEA00445F32 /* EPDeckViewAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D8E7B1C80DCEA00445F32 /* EPDeckViewAnimationManager.swift */; };
-		157D8E801C80DCEA00445F32 /* EPCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D8E7C1C80DCEA00445F32 /* EPCardView.swift */; };
-		157D8E811C80DCEA00445F32 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D8E7D1C80DCEA00445F32 /* Helpers.swift */; };
-		157D8E831C80DDE900445F32 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D8E821C80DDE900445F32 /* Extensions.swift */; };
-		4EB7C20653CB0808688B7AFF0BED3FCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		62D8AA2FA2A3D4629CF0EB7DE115EAC0 /* EPDeckView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF51B405FB9E2C3C2E3BD2D6BA58CCA3 /* EPDeckView-dummy.m */; };
+		3CFF225C6781078C4F974C4F9034FD3C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBF2A26A8224FE2DF6D73AB209E0F4C /* Extensions.swift */; };
+		6384F8D95B1A514FC790197C66490EAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		656FCD30717A203C644E519A9C9138CD /* Pods-EPDeckView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A17BABFBA052631B3ACDD111793E0CB /* Pods-EPDeckView_Tests-dummy.m */; };
 		6A5DB1B0912046F2571F803345CAC326 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		A69EEE313A95AEF9EB77734CA42C5A22 /* EPDeckView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CABB794FDABAAAE72DAF56E8218E174B /* EPDeckView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C4C7F666E9CBD9521B32C887EFA4FD6 /* EPDeckView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A12741B8D159A8D2BEDECC83320AEF71 /* EPDeckView.bundle */; };
+		7CFC819A15FD6ECA33D74688914FF863 /* EPCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64E90BAA5134ADC1C9765C127A7065CD /* EPCardView.swift */; };
+		7F7C7A4D2012E95D07273C67F35C199D /* EPDeckView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF51B405FB9E2C3C2E3BD2D6BA58CCA3 /* EPDeckView-dummy.m */; };
+		828E0075EBDBDE51B6CE57F8143AEAE8 /* EPDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB3A479CFAC10423C621BCD3BCC8F8C /* EPDeckView.swift */; };
+		849630E0745EC7A36A2AB9D4E8F3D115 /* EPDeckView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CABB794FDABAAAE72DAF56E8218E174B /* EPDeckView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE440A910EEA920B708878212AAE68D8 /* EPDeckViewAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206F16D3260276D813489A48DFF41E1 /* EPDeckViewAnimationManager.swift */; };
+		C0E049D35EF80E63EC011379C4DA1FAC /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB74E0B16A7B20026A3556D56A4699 /* Helpers.swift */; };
 		C9AF8AEC86F9A1C83D344B5CB282F6AA /* Pods-EPDeckView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F214F4C3398D11C44F2DC104264AA8AE /* Pods-EPDeckView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D4E8C4D00739B48D26DFD9C115FBE41E /* EPDeckView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A12741B8D159A8D2BEDECC83320AEF71 /* EPDeckView.bundle */; };
 		D62DDAE144FEE984E17137C6DBF20E63 /* Pods-EPDeckView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8530FE63AD1E55608135F5763555E581 /* Pods-EPDeckView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7A33A08F23BF3DC9665C1C85235AE62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		FB27B620C2DC5D4950EEACAE69C89413 /* Pods-EPDeckView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CB2E6A3C414E4B93972781A4C4B45BE /* Pods-EPDeckView_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2E85BE51072D2D652289E31B306CED14 /* PBXContainerItemProxy */ = {
+		CAAAC6878ED26198264CE308EE9CEB64 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = ECACEEDB7A8AD46D95C90D3D648B8F4B;
+			remoteGlobalIDString = 99C18B8A7DC851CF69C0999FD91058C3;
 			remoteInfo = "EPDeckView-EPDeckView";
 		};
 		E986D41054CC2C28BDA229CC226506ED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 285075A405279679D00D7B67D5BCE3B1;
+			remoteGlobalIDString = 7C8FA4D10460C5A5CFF132DAA3B94769;
 			remoteInfo = EPDeckView;
 		};
 		F7A794579098F1A324C30CDC750C6676 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 285075A405279679D00D7B67D5BCE3B1;
+			remoteGlobalIDString = 7C8FA4D10460C5A5CFF132DAA3B94769;
 			remoteInfo = EPDeckView;
 		};
 /* End PBXContainerItemProxy section */
@@ -53,23 +53,22 @@
 		04DC428EE99617482CAB57F198C997BF /* EPDeckView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EPDeckView-prefix.pch"; sourceTree = "<group>"; };
 		0502267AF88EB3336F70C87C4CECDA34 /* Pods-EPDeckView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPDeckView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		07EE7BAA4F2E896DF47B44FB3FDAB2F2 /* Pods_EPDeckView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPDeckView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CB3A479CFAC10423C621BCD3BCC8F8C /* EPDeckView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EPDeckView.swift; sourceTree = "<group>"; };
 		111A90E91F0435D48373F60FA965665D /* Pods-EPDeckView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EPDeckView_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		157D8E7A1C80DCEA00445F32 /* EPDeckView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPDeckView.swift; sourceTree = "<group>"; };
-		157D8E7B1C80DCEA00445F32 /* EPDeckViewAnimationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPDeckViewAnimationManager.swift; sourceTree = "<group>"; };
-		157D8E7C1C80DCEA00445F32 /* EPCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCardView.swift; sourceTree = "<group>"; };
-		157D8E7D1C80DCEA00445F32 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
-		157D8E821C80DDE900445F32 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		17DB74E0B16A7B20026A3556D56A4699 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		18D53F9360C846EABBE24B34E66EFDAA /* Pods-EPDeckView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EPDeckView_Tests-resources.sh"; sourceTree = "<group>"; };
 		2383CBF7B5D680F4074AB71357778518 /* EPDeckView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EPDeckView.modulemap; sourceTree = "<group>"; };
 		2A17BABFBA052631B3ACDD111793E0CB /* Pods-EPDeckView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EPDeckView_Tests-dummy.m"; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		403C97D0B9098BC9C923D754E5927D36 /* Pods_EPDeckView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPDeckView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD4E5E934653D439E3F18D46B67C47E /* EPDeckView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EPDeckView.xcconfig; sourceTree = "<group>"; };
+		64E90BAA5134ADC1C9765C127A7065CD /* EPCardView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EPCardView.swift; sourceTree = "<group>"; };
 		725672001F16B7B81C9BD20DE7F4503D /* Pods-EPDeckView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EPDeckView_Tests.modulemap"; sourceTree = "<group>"; };
 		72DFD6C55D41886359488429F2F7282E /* EPDeckView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EPDeckView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F86CCB7F51536F6E0163F74348641C /* Pods-EPDeckView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EPDeckView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		7B58D2D68F867C19DE9540FA2C0B17C2 /* Pods-EPDeckView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EPDeckView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		7CB2E6A3C414E4B93972781A4C4B45BE /* Pods-EPDeckView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EPDeckView_Example-dummy.m"; sourceTree = "<group>"; };
+		7DBF2A26A8224FE2DF6D73AB209E0F4C /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8530FE63AD1E55608135F5763555E581 /* Pods-EPDeckView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EPDeckView_Tests-umbrella.h"; sourceTree = "<group>"; };
 		93BA8125A8077F97079F3D1015040402 /* Pods-EPDeckView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPDeckView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A12741B8D159A8D2BEDECC83320AEF71 /* EPDeckView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EPDeckView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +81,7 @@
 		CABB794FDABAAAE72DAF56E8218E174B /* EPDeckView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EPDeckView-umbrella.h"; sourceTree = "<group>"; };
 		CB6EECC6272C0159CD72BFA3405002BF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFF0F4DEED65C522191142B369252A96 /* Pods-EPDeckView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EPDeckView_Example-resources.sh"; sourceTree = "<group>"; };
+		D206F16D3260276D813489A48DFF41E1 /* EPDeckViewAnimationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EPDeckViewAnimationManager.swift; sourceTree = "<group>"; };
 		D8C43136E42AE31B7125A3E6F67B314D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD0F85055751FEFF67EE53815D139258 /* Pods-EPDeckView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EPDeckView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E826DF17355EFD0110A6B441BF3CD02F /* Pods-EPDeckView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPDeckView_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,18 +97,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3FB83DC2B4F2EBF88E6BA78E6811DD24 /* Frameworks */ = {
+		5B471FF1B302C3A4ADCCF590CD0C4664 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6384F8D95B1A514FC790197C66490EAD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		878B6D9E64A6413F91D144B447168DF4 /* Frameworks */ = {
+		DF386D5B44A67F47E2ADA27C59F34BF2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EB7C20653CB0808688B7AFF0BED3FCA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,18 +186,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		922A883E8C93869455E221DD6EFAEA39 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				157D8E7A1C80DCEA00445F32 /* EPDeckView.swift */,
-				157D8E7B1C80DCEA00445F32 /* EPDeckViewAnimationManager.swift */,
-				157D8E7C1C80DCEA00445F32 /* EPCardView.swift */,
-				157D8E7D1C80DCEA00445F32 /* Helpers.swift */,
-				157D8E821C80DDE900445F32 /* Extensions.swift */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		9927C8B4FC18EE37892A7BDF6C39593D /* Pods-EPDeckView_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,14 +204,6 @@
 			path = "Target Support Files/Pods-EPDeckView_Tests";
 			sourceTree = "<group>";
 		};
-		9D319A3A596BEF2AE57E6F047E2CF2FF /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				922A883E8C93869455E221DD6EFAEA39 /* Classes */,
-			);
-			path = Pod;
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +220,18 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		C6FC7F834D66E2817099811B0A33B0CD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				64E90BAA5134ADC1C9765C127A7065CD /* EPCardView.swift */,
+				0CB3A479CFAC10423C621BCD3BCC8F8C /* EPDeckView.swift */,
+				D206F16D3260276D813489A48DFF41E1 /* EPDeckViewAnimationManager.swift */,
+				7DBF2A26A8224FE2DF6D73AB209E0F4C /* Extensions.swift */,
+				17DB74E0B16A7B20026A3556D56A4699 /* Helpers.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		CA5D7A49EC0A23CC597B271EE4388986 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,10 +240,18 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
+		D2501FD00F71E62D0A0029147AA8F929 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				C6FC7F834D66E2817099811B0A33B0CD /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
 		D78CC09F5C7F4AD6B0B2A5EE1BDAE4C2 /* EPDeckView */ = {
 			isa = PBXGroup;
 			children = (
-				9D319A3A596BEF2AE57E6F047E2CF2FF /* Pod */,
+				D2501FD00F71E62D0A0029147AA8F929 /* Pod */,
 				257764B66B71A3EB782AF285FBB5D9AB /* Support Files */,
 			);
 			name = EPDeckView;
@@ -269,11 +269,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6B457E303DA533D309445E0CF4058158 /* Headers */ = {
+		C0FFF35399F5A41DFA1CD2B4F2E87D03 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A69EEE313A95AEF9EB77734CA42C5A22 /* EPDeckView-umbrella.h in Headers */,
+				849630E0745EC7A36A2AB9D4E8F3D115 /* EPDeckView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,25 +288,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		285075A405279679D00D7B67D5BCE3B1 /* EPDeckView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0A328626711B735E321B0380DEC6A42A /* Build configuration list for PBXNativeTarget "EPDeckView" */;
-			buildPhases = (
-				1981EF96853F22C2A08EDBD2B49FDFA3 /* Sources */,
-				878B6D9E64A6413F91D144B447168DF4 /* Frameworks */,
-				D0DC904C480DCE86FD1A03D7D5FB4700 /* Resources */,
-				6B457E303DA533D309445E0CF4058158 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				62CFB5571B917D0C423AD8FCD7F7D7CE /* PBXTargetDependency */,
-			);
-			name = EPDeckView;
-			productName = EPDeckView;
-			productReference = 72DFD6C55D41886359488429F2F7282E /* EPDeckView.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		623F48542E092A74FE1162787AE76E02 /* Pods-EPDeckView_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8FAC6F9FA7C3656F46663BCA508CA8E /* Build configuration list for PBXNativeTarget "Pods-EPDeckView_Tests" */;
@@ -325,6 +306,42 @@
 			productReference = 403C97D0B9098BC9C923D754E5927D36 /* Pods_EPDeckView_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		7C8FA4D10460C5A5CFF132DAA3B94769 /* EPDeckView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37AF662AD2F4BB34D6BDD58D490DCCAA /* Build configuration list for PBXNativeTarget "EPDeckView" */;
+			buildPhases = (
+				E58B8888C10139D4E3013BE321F38F5D /* Sources */,
+				5B471FF1B302C3A4ADCCF590CD0C4664 /* Frameworks */,
+				D51CE494FF097E3EA47B64700E0A5B95 /* Resources */,
+				C0FFF35399F5A41DFA1CD2B4F2E87D03 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				35EA7A054CCF9E7F2831F4437917E18E /* PBXTargetDependency */,
+			);
+			name = EPDeckView;
+			productName = EPDeckView;
+			productReference = 72DFD6C55D41886359488429F2F7282E /* EPDeckView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		99C18B8A7DC851CF69C0999FD91058C3 /* EPDeckView-EPDeckView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D8886DE73D6965FC6506B503A8D6C6F /* Build configuration list for PBXNativeTarget "EPDeckView-EPDeckView" */;
+			buildPhases = (
+				9E44E7C32AA34DBEA549C3EE0DD74EA0 /* Sources */,
+				DF386D5B44A67F47E2ADA27C59F34BF2 /* Frameworks */,
+				909753DA79DA286B73E65DB458719AD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EPDeckView-EPDeckView";
+			productName = "EPDeckView-EPDeckView";
+			productReference = A12741B8D159A8D2BEDECC83320AEF71 /* EPDeckView.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		C3BE16990092B3536D5D032610C18CBC /* Pods-EPDeckView_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 265BAE267A259FFA1DD4FF4DC6604135 /* Build configuration list for PBXNativeTarget "Pods-EPDeckView_Example" */;
@@ -342,23 +359,6 @@
 			productName = "Pods-EPDeckView_Example";
 			productReference = 07EE7BAA4F2E896DF47B44FB3FDAB2F2 /* Pods_EPDeckView_Example.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		ECACEEDB7A8AD46D95C90D3D648B8F4B /* EPDeckView-EPDeckView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 07514725DA07E0CA5A75A028BBAEACA8 /* Build configuration list for PBXNativeTarget "EPDeckView-EPDeckView" */;
-			buildPhases = (
-				E1D492E67CC37B59F369C8DC0654D512 /* Sources */,
-				3FB83DC2B4F2EBF88E6BA78E6811DD24 /* Frameworks */,
-				1D7D8AC327A736B6F0B50CB79343B9FE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "EPDeckView-EPDeckView";
-			productName = "EPDeckView-EPDeckView";
-			productReference = A12741B8D159A8D2BEDECC83320AEF71 /* EPDeckView.bundle */;
-			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -381,8 +381,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				285075A405279679D00D7B67D5BCE3B1 /* EPDeckView */,
-				ECACEEDB7A8AD46D95C90D3D648B8F4B /* EPDeckView-EPDeckView */,
+				7C8FA4D10460C5A5CFF132DAA3B94769 /* EPDeckView */,
+				99C18B8A7DC851CF69C0999FD91058C3 /* EPDeckView-EPDeckView */,
 				C3BE16990092B3536D5D032610C18CBC /* Pods-EPDeckView_Example */,
 				623F48542E092A74FE1162787AE76E02 /* Pods-EPDeckView_Tests */,
 			);
@@ -390,42 +390,36 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1D7D8AC327A736B6F0B50CB79343B9FE /* Resources */ = {
+		909753DA79DA286B73E65DB458719AD2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D0DC904C480DCE86FD1A03D7D5FB4700 /* Resources */ = {
+		D51CE494FF097E3EA47B64700E0A5B95 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4E8C4D00739B48D26DFD9C115FBE41E /* EPDeckView.bundle in Resources */,
+				7C4C7F666E9CBD9521B32C887EFA4FD6 /* EPDeckView.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1981EF96853F22C2A08EDBD2B49FDFA3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				157D8E801C80DCEA00445F32 /* EPCardView.swift in Sources */,
-				157D8E831C80DDE900445F32 /* Extensions.swift in Sources */,
-				157D8E811C80DCEA00445F32 /* Helpers.swift in Sources */,
-				62D8AA2FA2A3D4629CF0EB7DE115EAC0 /* EPDeckView-dummy.m in Sources */,
-				157D8E7F1C80DCEA00445F32 /* EPDeckViewAnimationManager.swift in Sources */,
-				157D8E7E1C80DCEA00445F32 /* EPDeckView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		6FDE482B72F1534C3CDC9ECE518A9E19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				656FCD30717A203C644E519A9C9138CD /* Pods-EPDeckView_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E44E7C32AA34DBEA549C3EE0DD74EA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,10 +431,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1D492E67CC37B59F369C8DC0654D512 /* Sources */ = {
+		E58B8888C10139D4E3013BE321F38F5D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CFC819A15FD6ECA33D74688914FF863 /* EPCardView.swift in Sources */,
+				7F7C7A4D2012E95D07273C67F35C199D /* EPDeckView-dummy.m in Sources */,
+				828E0075EBDBDE51B6CE57F8143AEAE8 /* EPDeckView.swift in Sources */,
+				AE440A910EEA920B708878212AAE68D8 /* EPDeckViewAnimationManager.swift in Sources */,
+				3CFF225C6781078C4F974C4F9034FD3C /* Extensions.swift in Sources */,
+				C0E049D35EF80E63EC011379C4DA1FAC /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,63 +450,24 @@
 		23B345A35064D27F730461EF0FB8D72D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = EPDeckView;
-			target = 285075A405279679D00D7B67D5BCE3B1 /* EPDeckView */;
+			target = 7C8FA4D10460C5A5CFF132DAA3B94769 /* EPDeckView */;
 			targetProxy = E986D41054CC2C28BDA229CC226506ED /* PBXContainerItemProxy */;
 		};
 		2C27772353599B36AD89B8A2E9DEAE9E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = EPDeckView;
-			target = 285075A405279679D00D7B67D5BCE3B1 /* EPDeckView */;
+			target = 7C8FA4D10460C5A5CFF132DAA3B94769 /* EPDeckView */;
 			targetProxy = F7A794579098F1A324C30CDC750C6676 /* PBXContainerItemProxy */;
 		};
-		62CFB5571B917D0C423AD8FCD7F7D7CE /* PBXTargetDependency */ = {
+		35EA7A054CCF9E7F2831F4437917E18E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "EPDeckView-EPDeckView";
-			target = ECACEEDB7A8AD46D95C90D3D648B8F4B /* EPDeckView-EPDeckView */;
-			targetProxy = 2E85BE51072D2D652289E31B306CED14 /* PBXContainerItemProxy */;
+			target = 99C18B8A7DC851CF69C0999FD91058C3 /* EPDeckView-EPDeckView */;
+			targetProxy = CAAAC6878ED26198264CE308EE9CEB64 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		011A3FA4BF09335226B204098929BB4A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AD4E5E934653D439E3F18D46B67C47E /* EPDeckView.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/EPDeckView/EPDeckView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EPDeckView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EPDeckView/EPDeckView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = EPDeckView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		106F5ACF2AC627C08996928FD56B37C2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AD4E5E934653D439E3F18D46B67C47E /* EPDeckView.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = EPDeckView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -541,6 +502,33 @@
 			};
 			name = Release;
 		};
+		41F765927C3C814001E2B35B072DF363 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AD4E5E934653D439E3F18D46B67C47E /* EPDeckView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EPDeckView/EPDeckView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EPDeckView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EPDeckView/EPDeckView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = EPDeckView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		4DACB6E2093652869E13F873E786512C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B49DB2B99CD19068BF1F66B88D347D90 /* Pods-EPDeckView_Tests.debug.xcconfig */;
@@ -569,6 +557,18 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		51BE2BA0A29B65D04674FEBE54D0DB1A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AD4E5E934653D439E3F18D46B67C47E /* EPDeckView.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = EPDeckView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -611,34 +611,6 @@
 			};
 			name = Debug;
 		};
-		59363A5A11BE693EBC52F96D02228DE7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AD4E5E934653D439E3F18D46B67C47E /* EPDeckView.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/EPDeckView/EPDeckView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EPDeckView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EPDeckView/EPDeckView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = EPDeckView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		6CB59DC8439876B7443B1C4DEC2B504B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0502267AF88EB3336F70C87C4CECDA34 /* Pods-EPDeckView_Example.release.xcconfig */;
@@ -669,7 +641,35 @@
 			};
 			name = Release;
 		};
-		D6EA0A22C12B79994FCB3FFB5DC796AD /* Release */ = {
+		75967D00E32A1A590D241047DE720472 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AD4E5E934653D439E3F18D46B67C47E /* EPDeckView.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EPDeckView/EPDeckView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EPDeckView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EPDeckView/EPDeckView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = EPDeckView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B82C3C44546A716B32D9BCF7BCD65F21 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5AD4E5E934653D439E3F18D46B67C47E /* EPDeckView.xcconfig */;
 			buildSettings = {
@@ -745,24 +745,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		07514725DA07E0CA5A75A028BBAEACA8 /* Build configuration list for PBXNativeTarget "EPDeckView-EPDeckView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				106F5ACF2AC627C08996928FD56B37C2 /* Debug */,
-				D6EA0A22C12B79994FCB3FFB5DC796AD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0A328626711B735E321B0380DEC6A42A /* Build configuration list for PBXNativeTarget "EPDeckView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				59363A5A11BE693EBC52F96D02228DE7 /* Debug */,
-				011A3FA4BF09335226B204098929BB4A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		265BAE267A259FFA1DD4FF4DC6604135 /* Build configuration list for PBXNativeTarget "Pods-EPDeckView_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -777,6 +759,24 @@
 			buildConfigurations = (
 				552D02D5BA751AC2E8790D2811D496CA /* Debug */,
 				10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37AF662AD2F4BB34D6BDD58D490DCCAA /* Build configuration list for PBXNativeTarget "EPDeckView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75967D00E32A1A590D241047DE720472 /* Debug */,
+				41F765927C3C814001E2B35B072DF363 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D8886DE73D6965FC6506B503A8D6C6F /* Build configuration list for PBXNativeTarget "EPDeckView-EPDeckView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51BE2BA0A29B65D04674FEBE54D0DB1A /* Debug */,
+				B82C3C44546A716B32D9BCF7BCD65F21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
