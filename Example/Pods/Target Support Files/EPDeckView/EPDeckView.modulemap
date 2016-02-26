@@ -1,0 +1,6 @@
+framework module EPDeckView {
+  umbrella header "EPDeckView-umbrella.h"
+
+  export *
+  module * { export * }
+}

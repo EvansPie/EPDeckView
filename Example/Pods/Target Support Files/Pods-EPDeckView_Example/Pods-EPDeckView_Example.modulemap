@@ -1,0 +1,6 @@
+framework module Pods_EPDeckView_Example {
+  umbrella header "Pods-EPDeckView_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

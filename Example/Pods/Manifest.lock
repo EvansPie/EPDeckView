@@ -1,0 +1,14 @@
+PODS:
+  - EPDeckView (0.1.0)
+
+DEPENDENCIES:
+  - EPDeckView (from `../`)
+
+EXTERNAL SOURCES:
+  EPDeckView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  EPDeckView: 8a4d17e03adb2d218f1b4d7dbe13ec0278048b8a
+
+COCOAPODS: 0.39.0
