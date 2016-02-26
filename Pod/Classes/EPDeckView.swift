@@ -315,8 +315,8 @@ extension EPDeckView: EPCardViewDelegate {
         switch gestureRecognizer.state {
         case UIGestureRecognizerState.Changed:
             
-            let cardViewsToTransform: [EPCardView] = Helpers.getSuffixArrayFromArray(self.cardViews, index: self.topCardIndex) as! [EPCardView]
-            
+            let cardViewsToTransform: [EPCardView] = Array(self.cardViews.suffixFrom(self.topCardIndex))
+
             for (i, cardViewToTransform) in cardViewsToTransform.enumerate() {
                 if i == 0 {
                     continue
@@ -348,7 +348,7 @@ extension EPDeckView: EPCardViewDelegate {
     func cardView(cardView: EPCardView, afterSwipeMovedTo cardViewEndPoint: CardViewEndPoint) {
         
         if cardViewEndPoint == .Center {
-            let cardViewsToTransform: [EPCardView] = Helpers.getSuffixArrayFromArray(self.cardViews, index: self.topCardIndex) as! [EPCardView]
+            let cardViewsToTransform: [EPCardView] = Array(self.cardViews.suffixFrom(self.topCardIndex))
             
             for (i, cardViewToTransform) in cardViewsToTransform.enumerate() {
                 UIView.animateWithDuration(self.deckViewAnimationManager.deckViewAnimationDuration,
@@ -378,7 +378,7 @@ extension EPDeckView: EPCardViewDelegate {
     
     //  The card moves out of the screen (left or right).
     func cardView(cardView: EPCardView, movingToDirection direction: CardViewDirection) {
-        let cardViewsToTransform: [EPCardView] = Helpers.getSuffixArrayFromArray(self.cardViews, index: self.topCardIndex) as! [EPCardView]
+        let cardViewsToTransform: [EPCardView] = Array(self.cardViews.suffixFrom(self.topCardIndex))
         
         for (i, cardViewToTransform) in cardViewsToTransform.enumerate() {
             if i == 0 {
@@ -412,7 +412,7 @@ extension EPDeckView: EPCardViewDelegate {
     }
     
     func cardView(cardView: EPCardView, cardViewMovedTo cardViewEndPoint: CardViewEndPoint) {
-        let cardViewsToTransform: [EPCardView] = Helpers.getSuffixArrayFromArray(self.cardViews, index: self.topCardIndex) as! [EPCardView]
+        let cardViewsToTransform: [EPCardView] = Array(self.cardViews.suffixFrom(self.topCardIndex))
         
         for (i, cardViewToTransform) in cardViewsToTransform.enumerate() {
             

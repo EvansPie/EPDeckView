@@ -17,7 +17,6 @@
 		828E0075EBDBDE51B6CE57F8143AEAE8 /* EPDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB3A479CFAC10423C621BCD3BCC8F8C /* EPDeckView.swift */; };
 		849630E0745EC7A36A2AB9D4E8F3D115 /* EPDeckView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CABB794FDABAAAE72DAF56E8218E174B /* EPDeckView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE440A910EEA920B708878212AAE68D8 /* EPDeckViewAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206F16D3260276D813489A48DFF41E1 /* EPDeckViewAnimationManager.swift */; };
-		C0E049D35EF80E63EC011379C4DA1FAC /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB74E0B16A7B20026A3556D56A4699 /* Helpers.swift */; };
 		C9AF8AEC86F9A1C83D344B5CB282F6AA /* Pods-EPDeckView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F214F4C3398D11C44F2DC104264AA8AE /* Pods-EPDeckView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D62DDAE144FEE984E17137C6DBF20E63 /* Pods-EPDeckView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8530FE63AD1E55608135F5763555E581 /* Pods-EPDeckView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7A33A08F23BF3DC9665C1C85235AE62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
@@ -55,7 +54,6 @@
 		07EE7BAA4F2E896DF47B44FB3FDAB2F2 /* Pods_EPDeckView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPDeckView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB3A479CFAC10423C621BCD3BCC8F8C /* EPDeckView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EPDeckView.swift; sourceTree = "<group>"; };
 		111A90E91F0435D48373F60FA965665D /* Pods-EPDeckView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EPDeckView_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		17DB74E0B16A7B20026A3556D56A4699 /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		18D53F9360C846EABBE24B34E66EFDAA /* Pods-EPDeckView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EPDeckView_Tests-resources.sh"; sourceTree = "<group>"; };
 		2383CBF7B5D680F4074AB71357778518 /* EPDeckView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EPDeckView.modulemap; sourceTree = "<group>"; };
 		2A17BABFBA052631B3ACDD111793E0CB /* Pods-EPDeckView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EPDeckView_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -227,7 +225,6 @@
 				0CB3A479CFAC10423C621BCD3BCC8F8C /* EPDeckView.swift */,
 				D206F16D3260276D813489A48DFF41E1 /* EPDeckViewAnimationManager.swift */,
 				7DBF2A26A8224FE2DF6D73AB209E0F4C /* Extensions.swift */,
-				17DB74E0B16A7B20026A3556D56A4699 /* Helpers.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -440,7 +437,6 @@
 				828E0075EBDBDE51B6CE57F8143AEAE8 /* EPDeckView.swift in Sources */,
 				AE440A910EEA920B708878212AAE68D8 /* EPDeckViewAnimationManager.swift in Sources */,
 				3CFF225C6781078C4F974C4F9034FD3C /* Extensions.swift in Sources */,
-				C0E049D35EF80E63EC011379C4DA1FAC /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
