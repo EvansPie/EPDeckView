@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'EPDeckView_Example', :exclusive => true do
+  pod 'EPDeckView', :path => '../'
+end
+
+target 'EPDeckView_Tests', :exclusive => true do
+  pod 'EPDeckView', :path => '../'
+
+  
+end
