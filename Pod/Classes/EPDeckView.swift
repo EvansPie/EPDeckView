@@ -219,7 +219,7 @@ public class EPDeckView: UIView {
     private func calculateCardAngles() {
         var tmpComputedCardAngles: [CGFloat] = []
         
-        for var i=0; i<self.cardViews.count; i++ {
+        for (i, _) in self.cardViews.enumerate() {
             let tmpCardAngle = CGFloat(i) * self.deckViewAnimationManager.deckViewCardAngleDelta
             tmpComputedCardAngles.append(tmpCardAngle)
         }
@@ -231,7 +231,7 @@ public class EPDeckView: UIView {
     private func calculateCardScales() {
         var tmpComputedCardScalePercentages: [CGFloat] = []
         
-        for var i=0; i<self.cardViews.count; i++ {
+        for (i, _) in self.cardViews.enumerate() {
             var tmpCardScale = 1 - CGFloat(i+1) * self.deckViewAnimationManager.deckViewCardScaleDelta
             
             if tmpCardScale > 1.0 {
@@ -252,7 +252,7 @@ public class EPDeckView: UIView {
     private func calculateCardAlphas() {
         var tmpComputedCardAlphas: [CGFloat] = []
         
-        for var i=0; i<self.cardViews.count; i++ {
+        for (i, _) in self.cardViews.enumerate() {
             var tmpCardAlpha = 1 - CGFloat(i) * self.deckViewAnimationManager.deckViewCardAlphaDelta
             
             if tmpCardAlpha > 1.0 {
@@ -282,12 +282,9 @@ public class EPDeckView: UIView {
     private func transformCards() {
         self.transformedCardCenters = []
         
-        for var i=0; i<self.cardViews.count; i++ {
-            let cardView: EPCardView = self.cardViews[i]
-            
+        for (i, cardView) in self.cardViews.enumerate() {
             cardView.transform = self.getCardViewTransformForIndex(i)
             cardView.anchorTo(self.deckViewAnimationManager.deckViewAnchor)
-            
             self.transformedCardCenters.append(cardView.center)
         }
         
@@ -320,12 +317,10 @@ extension EPDeckView: EPCardViewDelegate {
             
             let cardViewsToTransform: [EPCardView] = Helpers.getSuffixArrayFromArray(self.cardViews, index: self.topCardIndex) as! [EPCardView]
             
-            for var i=0; i<cardViewsToTransform.count; i++ {
+            for (i, cardViewToTransform) in cardViewsToTransform.enumerate() {
                 if i == 0 {
                     continue
                 }
-                
-                let cardViewToTransform: EPCardView = cardViewsToTransform[i]
                 
                 let rotationAngle: CGFloat = (self.cardAnglesDegrees[i-1] - self.deckViewAnimationManager.deckViewCardAngleDelta * transformPercentage + self.deckViewAnimationManager.deckViewCardAngleDelta).toRad()
                 let rotationAngleTransform: CGAffineTransform = CGAffineTransformMakeRotation(rotationAngle)
@@ -355,8 +350,7 @@ extension EPDeckView: EPCardViewDelegate {
         if cardViewEndPoint == .Center {
             let cardViewsToTransform: [EPCardView] = Helpers.getSuffixArrayFromArray(self.cardViews, index: self.topCardIndex) as! [EPCardView]
             
-            for var i=0; i<cardViewsToTransform.count; i++ {
-                let cardViewToTransform: EPCardView = cardViewsToTransform[i]
+            for (i, cardViewToTransform) in cardViewsToTransform.enumerate() {
                 UIView.animateWithDuration(self.deckViewAnimationManager.deckViewAnimationDuration,
                     delay: 0.0,
                     options: UIViewAnimationOptions.CurveEaseInOut,
@@ -386,12 +380,10 @@ extension EPDeckView: EPCardViewDelegate {
     func cardView(cardView: EPCardView, movingToDirection direction: CardViewDirection) {
         let cardViewsToTransform: [EPCardView] = Helpers.getSuffixArrayFromArray(self.cardViews, index: self.topCardIndex) as! [EPCardView]
         
-        for var i=0; i<cardViewsToTransform.count; i++ {
+        for (i, cardViewToTransform) in cardViewsToTransform.enumerate() {
             if i == 0 {
                 continue
             }
-            
-            let cardViewToTransform: EPCardView = cardViewsToTransform[i]
             
             UIView.animateWithDuration(self.deckViewAnimationManager.deckViewAnimationDuration,
                 delay: 0.0,
@@ -422,8 +414,7 @@ extension EPDeckView: EPCardViewDelegate {
     func cardView(cardView: EPCardView, cardViewMovedTo cardViewEndPoint: CardViewEndPoint) {
         let cardViewsToTransform: [EPCardView] = Helpers.getSuffixArrayFromArray(self.cardViews, index: self.topCardIndex) as! [EPCardView]
         
-        for var i=0; i<cardViewsToTransform.count; i++ {
-            let cardViewToTransform: EPCardView = cardViewsToTransform[i]
+        for (i, cardViewToTransform) in cardViewsToTransform.enumerate() {
             
             UIView.animateWithDuration(self.deckViewAnimationManager.deckViewAnimationDuration,
                 delay: 0.0,
