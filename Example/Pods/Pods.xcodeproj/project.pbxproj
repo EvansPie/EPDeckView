@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		157D8E7E1C80DCEA00445F32 /* EPDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D8E7A1C80DCEA00445F32 /* EPDeckView.swift */; };
+		157D8E7F1C80DCEA00445F32 /* EPDeckViewAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D8E7B1C80DCEA00445F32 /* EPDeckViewAnimationManager.swift */; };
+		157D8E801C80DCEA00445F32 /* EPCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D8E7C1C80DCEA00445F32 /* EPCardView.swift */; };
+		157D8E811C80DCEA00445F32 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157D8E7D1C80DCEA00445F32 /* Helpers.swift */; };
 		4EB7C20653CB0808688B7AFF0BED3FCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 		62D8AA2FA2A3D4629CF0EB7DE115EAC0 /* EPDeckView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF51B405FB9E2C3C2E3BD2D6BA58CCA3 /* EPDeckView-dummy.m */; };
 		656FCD30717A203C644E519A9C9138CD /* Pods-EPDeckView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A17BABFBA052631B3ACDD111793E0CB /* Pods-EPDeckView_Tests-dummy.m */; };
@@ -49,6 +53,10 @@
 		0502267AF88EB3336F70C87C4CECDA34 /* Pods-EPDeckView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPDeckView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		07EE7BAA4F2E896DF47B44FB3FDAB2F2 /* Pods_EPDeckView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EPDeckView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		111A90E91F0435D48373F60FA965665D /* Pods-EPDeckView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EPDeckView_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		157D8E7A1C80DCEA00445F32 /* EPDeckView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPDeckView.swift; sourceTree = "<group>"; };
+		157D8E7B1C80DCEA00445F32 /* EPDeckViewAnimationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPDeckViewAnimationManager.swift; sourceTree = "<group>"; };
+		157D8E7C1C80DCEA00445F32 /* EPCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPCardView.swift; sourceTree = "<group>"; };
+		157D8E7D1C80DCEA00445F32 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		18D53F9360C846EABBE24B34E66EFDAA /* Pods-EPDeckView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EPDeckView_Tests-resources.sh"; sourceTree = "<group>"; };
 		2383CBF7B5D680F4074AB71357778518 /* EPDeckView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EPDeckView.modulemap; sourceTree = "<group>"; };
 		2A17BABFBA052631B3ACDD111793E0CB /* Pods-EPDeckView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EPDeckView_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -179,6 +187,10 @@
 		922A883E8C93869455E221DD6EFAEA39 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				157D8E7A1C80DCEA00445F32 /* EPDeckView.swift */,
+				157D8E7B1C80DCEA00445F32 /* EPDeckViewAnimationManager.swift */,
+				157D8E7C1C80DCEA00445F32 /* EPCardView.swift */,
+				157D8E7D1C80DCEA00445F32 /* Helpers.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -397,7 +409,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				157D8E801C80DCEA00445F32 /* EPCardView.swift in Sources */,
+				157D8E811C80DCEA00445F32 /* Helpers.swift in Sources */,
 				62D8AA2FA2A3D4629CF0EB7DE115EAC0 /* EPDeckView-dummy.m in Sources */,
+				157D8E7F1C80DCEA00445F32 /* EPDeckViewAnimationManager.swift in Sources */,
+				157D8E7E1C80DCEA00445F32 /* EPDeckView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
