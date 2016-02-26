@@ -11,7 +11,6 @@
 		62D8AA2FA2A3D4629CF0EB7DE115EAC0 /* EPDeckView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF51B405FB9E2C3C2E3BD2D6BA58CCA3 /* EPDeckView-dummy.m */; };
 		656FCD30717A203C644E519A9C9138CD /* Pods-EPDeckView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A17BABFBA052631B3ACDD111793E0CB /* Pods-EPDeckView_Tests-dummy.m */; };
 		6A5DB1B0912046F2571F803345CAC326 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		A10408E9F94178D1342412A2B1302DE1 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53185669DB6AC6CAD6C68DD6F6975A5 /* ReplaceMe.swift */; };
 		A69EEE313A95AEF9EB77734CA42C5A22 /* EPDeckView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CABB794FDABAAAE72DAF56E8218E174B /* EPDeckView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9AF8AEC86F9A1C83D344B5CB282F6AA /* Pods-EPDeckView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F214F4C3398D11C44F2DC104264AA8AE /* Pods-EPDeckView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4E8C4D00739B48D26DFD9C115FBE41E /* EPDeckView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A12741B8D159A8D2BEDECC83320AEF71 /* EPDeckView.bundle */; };
@@ -64,7 +63,6 @@
 		8530FE63AD1E55608135F5763555E581 /* Pods-EPDeckView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EPDeckView_Tests-umbrella.h"; sourceTree = "<group>"; };
 		93BA8125A8077F97079F3D1015040402 /* Pods-EPDeckView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EPDeckView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A12741B8D159A8D2BEDECC83320AEF71 /* EPDeckView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EPDeckView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		A53185669DB6AC6CAD6C68DD6F6975A5 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		A6592187858CD19D974BE9A5BD3FC7B5 /* Pods-EPDeckView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EPDeckView_Example.modulemap"; sourceTree = "<group>"; };
 		A97C034A2757FD668C9EBF5520C39FE6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2DD9815F5FED3EB15C8D7C61746F34D /* Pods-EPDeckView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EPDeckView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -181,7 +179,6 @@
 		922A883E8C93869455E221DD6EFAEA39 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				A53185669DB6AC6CAD6C68DD6F6975A5 /* ReplaceMe.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -401,7 +398,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				62D8AA2FA2A3D4629CF0EB7DE115EAC0 /* EPDeckView-dummy.m in Sources */,
-				A10408E9F94178D1342412A2B1302DE1 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
