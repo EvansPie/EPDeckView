@@ -34,7 +34,7 @@ public class EPCardView: UIView {
     var delegate: EPCardViewDelegate?
     
     // MARK: - INITIALIZATION
-    override init(frame: CGRect) {
+    public required override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.removeAllGestureRecognizers()
@@ -43,7 +43,7 @@ public class EPCardView: UIView {
         self.addGestureRecognizer(panGesture)
     }
     
-    required public init(coder aDecoder: NSCoder) {
+    public required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         
         self.removeAllGestureRecognizers()
