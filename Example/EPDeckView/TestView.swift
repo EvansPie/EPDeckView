@@ -14,6 +14,7 @@ class TestView: EPCardView {
     
     @IBOutlet weak var view: UIView!
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var displayNameLabel: UILabel!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var checkButton: UIButton!
 
