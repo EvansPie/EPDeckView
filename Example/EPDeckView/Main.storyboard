@@ -18,10 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUA-Vd-342" customClass="EPDeckView" customModule="EPDeckView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyc-5R-1qd">
                                 <rect key="frame" x="250" y="28" width="100" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -65,23 +61,16 @@
                         </subviews>
                         <color key="backgroundColor" red="0.35294117647058826" green="0.71764705882352942" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="DUA-Vd-342" secondAttribute="bottom" id="CYd-Im-kgL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TUB-LY-zgi" secondAttribute="trailing" id="Fic-sT-7S1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="DUA-Vd-342" secondAttribute="trailing" constant="-20" id="J9e-gd-Chh"/>
                             <constraint firstAttribute="leadingMargin" secondItem="wSe-fT-HrQ" secondAttribute="leading" id="LlH-XN-d3S"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="wSe-fT-HrQ" secondAttribute="bottom" constant="20" id="SGJ-Af-ykX"/>
-                            <constraint firstItem="DUA-Vd-342" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="SKC-Y2-XVw"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="TUB-LY-zgi" secondAttribute="bottom" constant="20" id="VG3-hi-FuP"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Hoe-Xr-ymI" secondAttribute="leading" id="iav-mG-tbk"/>
-                            <constraint firstItem="DUA-Vd-342" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="kXM-p3-DEP"/>
                             <constraint firstItem="Hoe-Xr-ymI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="7" id="oLJ-t1-EXg"/>
                             <constraint firstItem="xyc-5R-1qd" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="sJi-m6-StA"/>
                             <constraint firstItem="xyc-5R-1qd" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="wQe-oQ-aah"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="deckView" destination="DUA-Vd-342" id="eXI-gm-KaS"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
