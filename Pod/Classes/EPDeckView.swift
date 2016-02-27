@@ -86,8 +86,8 @@ public class EPDeckView: UIView {
     private(set) var transformedCardCenters: [CGPoint] = []
     
     //  The delegate & data source.
-    var delegate: EPDeckViewDelegate?
-    var dataSource: EPDeckViewDataSource?
+    public var delegate: EPDeckViewDelegate?
+    public var dataSource: EPDeckViewDataSource?
     
     
     //  MARK: - DeckView Initialization
@@ -110,7 +110,7 @@ public class EPDeckView: UIView {
     //  MARK: - CardView Functions
     
     //  The function reloadCards clears the DeckView and reloads the cards. It works as UITableView's reload data.
-    func reloadCards() {
+    public func reloadCards() {
         for subview in self.subviews {
             subview.removeFromSuperview()
         }
