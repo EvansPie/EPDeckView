@@ -92,7 +92,7 @@ public class EPDeckView: UIView {
     
     //  MARK: - DeckView Initialization
     
-    override init(frame: CGRect) {
+    public required override init(frame: CGRect) {
         super.init(frame: frame)
         
         // Initialize the default DeckViewAnimationManager. It may be replaced afterwards.
