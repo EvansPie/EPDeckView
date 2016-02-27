@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="EPDeckView_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DUA-Vd-342" customClass="EPDeckView" customModule="EPDeckView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyc-5R-1qd">
+                                <rect key="frame" x="250" y="28" width="100" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Reload cards">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reloadCardsButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SXO-C5-z0p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hoe-Xr-ymI">
+                                <rect key="frame" x="20" y="27" width="105" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Previous card">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="previousCardButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="196-Ln-wZw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSe-fT-HrQ">
+                                <rect key="frame" x="20" y="547" width="78" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Throw left">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="throwLeftButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Iid-9B-y5Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TUB-LY-zgi">
+                                <rect key="frame" x="492" y="547" width="88" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Throw right">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="throwRightButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Kfg-BA-y1r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35294117647058826" green="0.71764705882352942" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="DUA-Vd-342" secondAttribute="bottom" id="CYd-Im-kgL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TUB-LY-zgi" secondAttribute="trailing" id="Fic-sT-7S1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DUA-Vd-342" secondAttribute="trailing" constant="-20" id="J9e-gd-Chh"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="wSe-fT-HrQ" secondAttribute="leading" id="LlH-XN-d3S"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="wSe-fT-HrQ" secondAttribute="bottom" constant="20" id="SGJ-Af-ykX"/>
+                            <constraint firstItem="DUA-Vd-342" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="SKC-Y2-XVw"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="TUB-LY-zgi" secondAttribute="bottom" constant="20" id="VG3-hi-FuP"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Hoe-Xr-ymI" secondAttribute="leading" id="iav-mG-tbk"/>
+                            <constraint firstItem="DUA-Vd-342" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="kXM-p3-DEP"/>
+                            <constraint firstItem="Hoe-Xr-ymI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="7" id="oLJ-t1-EXg"/>
+                            <constraint firstItem="xyc-5R-1qd" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="sJi-m6-StA"/>
+                            <constraint firstItem="xyc-5R-1qd" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="wQe-oQ-aah"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="deckView" destination="DUA-Vd-342" id="eXI-gm-KaS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="322"/>
+        </scene>
+    </scenes>
+</document>
