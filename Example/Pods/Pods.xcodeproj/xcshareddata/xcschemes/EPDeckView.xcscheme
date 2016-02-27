@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CF889FA07115FB5CF0FBE13B'
+               BlueprintIdentifier = '014382631B9C7C2BCF04B0DD'
                BlueprintName = 'EPDeckView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'EPDeckView.framework'>
