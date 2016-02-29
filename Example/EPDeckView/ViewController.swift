@@ -26,12 +26,26 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
     }
     
 
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         
+        self.cardViews = []
         self.deckView.reloadCards()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
     }
     
     //  MARK: - BUTTON ACTIONS
