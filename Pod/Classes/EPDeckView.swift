@@ -40,11 +40,11 @@ import UIKit
     
     //  The function below returns the button that implements the functionality to move the card to the right.
     //  Each card can have its' own button.
-    optional func deckView(deckView: EPDeckView, rightButtonForIndex index: Int) -> UIButton?
+    optional func deckView(deckView: EPDeckView, rightButtonForCardAtIndex index: Int) -> UIButton?
     
     //  The function below returns the button that implements the functionality to move the card to the left.
     //  Each card can have its' own button.
-    optional func deckView(deckView: EPDeckView, leftButtonForIndex index: Int) -> UIButton?
+    optional func deckView(deckView: EPDeckView, leftButtonForCardAtIndex index: Int) -> UIButton?
     
     //  The function below is called when the button with the move right functionality is tapped.
     optional func deckView(deckView: EPDeckView, didTapRightButtonAtIndex index: Int)
@@ -142,12 +142,12 @@ public class EPDeckView: UIView {
             cardView.center = self.deckViewAnimationManager.deckCenter
             cardView.delegate = self
             
-            if let rightButton: UIButton = self.delegate?.deckView?(self, rightButtonForIndex: i) {
+            if let rightButton: UIButton = self.delegate?.deckView?(self, rightButtonForCardAtIndex: i) {
                 rightButton.tag = i
                 rightButton.addTarget(self, action: Selector("rightButtonTapped:"), forControlEvents: .TouchUpInside)
             }
             
-            if let leftButton: UIButton = self.delegate?.deckView?(self, leftButtonForIndex: i) {
+            if let leftButton: UIButton = self.delegate?.deckView?(self, leftButtonForCardAtIndex: i) {
                 leftButton.tag = i
                 leftButton.addTarget(self, action: Selector("leftButtonTapped:"), forControlEvents: .TouchUpInside)
             }

@@ -158,12 +158,12 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
         return testView
     }
     
-    func deckView(deckView: EPDeckView, rightButtonForIndex index: Int) -> UIButton? {
+    func deckView(deckView: EPDeckView, rightButtonForCardAtIndex index: Int) -> UIButton? {
         let rightButton: UIButton = (self.cardViews[index] as! TestView).checkButton
         return rightButton
     }
     
-    func deckView(deckView: EPDeckView, leftButtonForIndex index: Int) -> UIButton? {
+    func deckView(deckView: EPDeckView, leftButtonForCardAtIndex index: Int) -> UIButton? {
         let leftButton: UIButton = (self.cardViews[index] as! TestView).cancelButton
         return leftButton
     }
