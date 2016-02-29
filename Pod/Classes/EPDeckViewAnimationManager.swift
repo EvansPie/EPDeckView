@@ -78,7 +78,7 @@ public class EPDeckViewAnimationManager {
     
     // MARK: - Initialization
 
-    init(frame: CGRect) {
+    public init(frame: CGRect) {
         self.frame = frame
         
         self.deckViewCenter = CGPointMake((self.frame!.origin.x + self.frame!.size.width/2), (self.frame!.origin.y + self.frame!.size.height/2))

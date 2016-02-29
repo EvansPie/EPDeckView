@@ -63,7 +63,7 @@ public class EPDeckView: UIView {
     // MARK: Properties
     
     //  The animation manager holds the vars for the card dragging and deck view animations.
-    var deckViewAnimationManager: EPDeckViewAnimationManager! {
+    public var deckViewAnimationManager: EPDeckViewAnimationManager! {
         didSet {
             
         }
