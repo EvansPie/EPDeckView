@@ -122,7 +122,7 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
     
     //  MARK: - EPDECKVIEW DATASOURCE & DELEGATE
     func numberOfCardsInDeckView(deckView: EPDeckView) -> Int {
-        return 8
+        return 6
     }
     
     func deckView(deckView: EPDeckView, cardViewAtIndexPath indexPath: Int) -> EPCardView {
@@ -135,15 +135,21 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
         testView.layer.shadowRadius = 25;
         testView.layer.shadowOpacity = 0.25;
         
-        if indexPath%4 == 0 {
+        if indexPath%6 == 0 {
             testView.profileImageView.image = UIImage(named: "darth_vader")
             testView.displayNameLabel.text = "Darth Vader"
-        } else if indexPath%4 == 1 {
+        } else if indexPath%6 == 1 {
             testView.profileImageView.image = UIImage(named: "cthulhu")
             testView.displayNameLabel.text = "Cthulhu"
-        } else if indexPath%4 == 2 {
+        } else if indexPath%6 == 2 {
             testView.profileImageView.image = UIImage(named: "john")
             testView.displayNameLabel.text = "John Smith"
+        } else if indexPath%6 == 3 {
+            testView.profileImageView.image = UIImage(named: "cylon")
+            testView.displayNameLabel.text = "Cylon"
+        } else if indexPath%6 == 4 {
+            testView.profileImageView.image = UIImage(named: "weeping_angel")
+            testView.displayNameLabel.text = "Weeping Angel"
         }
         
         //  Keep a reference so you can pass the nib's buttons to the delegate functions.
