@@ -19,23 +19,29 @@
 Clone this repo and manually add the source files to project.
 
 ### CocoaPods
-If you are using [CocoaPods](https://cocoapods.org) just add to your podfile:`pod 'EPDeckView', '~> 0.1.0'`
+If you are using [CocoaPods](https://cocoapods.org) just add in your podfile:
+
+`pod 'EPDeckView', '~> 0.1.0'`
 
 
 ## Usage
-1.) Create a new view inheriting `EPDeckView` and add it on your view.
+1) Create a new view inheriting `EPDeckView` and add it on your view.
 
-2.) Conform to `EPDeckViewDataSource` & `EPDeckViewDelegate` as you would with a `UITableView`.
+2) Conform to `EPDeckViewDataSource` & `EPDeckViewDelegate` as you would with a `UITableView`.
 
-3.) Return the number of cards that you wish to add in the data source function `numberOfCardsInDeckView(_:)`.
+3) Return the number of cards that you wish to add in the data source function 
 
-4.) Create & return each card of the deck with `deckView(_:cardViewAtIndexPath:`.
+`func numberOfCardsInDeckView(deckView: EPDeckView) -> Int {
+return 6
+}`
 
-5.) Modify the animation of the deck and the card being dragged by creating a `EPDeckViewAnimationManager` and setting it in `EPDeckView`. If you don't create a custom `EPDeckViewAnimationManager` then the default animation values will be applied.
+4) Create & return each card of the deck with `deckView(_:cardViewAtIndexPath:)`.
 
-6.) To add the functionality to throw the cards left/right on your custom view's buttons, simply return the buttons of each card in the delegate functions `deckView(_:rightButtonForCardAtIndex:)` and `deckView(_:leftButtonForCardAtIndex:)`.
+5) Modify the animation of the deck and the card being dragged by creating a `EPDeckViewAnimationManager` and setting it in `EPDeckView`. If you don't create a custom `EPDeckViewAnimationManager` then the default animation values will be applied.
 
-7.) Monitor the card's movement with the delegate function `deckView(_:cardAtIndex:movedToDirection:)` and the card's button tap with `deckView(_:didTapLeftButtonAtIndex:)` or `deckView(_:didTapRightButtonAtIndex:)`.
+6) To add the functionality to throw the cards left/right on your custom view's buttons, simply return the buttons of each card in the delegate functions `deckView(_:rightButtonForCardAtIndex:)` and `deckView(_:leftButtonForCardAtIndex:)`.
+
+7) Monitor the card's movement with the delegate function `deckView(_:cardAtIndex:movedToDirection:)` and the card's button tap with `deckView(_:didTapLeftButtonAtIndex:)` or `deckView(_:didTapRightButtonAtIndex:)`.
 
 
 ## Author
