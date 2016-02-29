@@ -111,6 +111,8 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
     
     func deckView(deckView: EPDeckView, didTapRightButtonAtIndex index: Int) {
         print("Right button of card at index: \(index) tapped.")
+        
+        //
     }
 
 }
