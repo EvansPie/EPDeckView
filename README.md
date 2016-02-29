@@ -13,9 +13,13 @@
 
 
 ## Installation
-Just add the EPDeckView.swift, EPCardView, EPDeckViewAnimationManager & Extensions.swift files to your project.
 
-Alternatively use [CocoaPods](https://cocoapods.org) with Podfile:`pod 'EPDeckView', '~> 0.1.0'`
+### Manually
+
+Clone this repo and manually add the source files to project.
+
+### CocoaPods
+If you are using [CocoaPods](https://cocoapods.org) just add to your podfile:`pod 'EPDeckView', '~> 0.1.0'`
 
 
 ## Usage
@@ -27,7 +31,7 @@ Alternatively use [CocoaPods](https://cocoapods.org) with Podfile:`pod 'EPDeckVi
 
 4.) Create & return each card of the deck with `deckView(_:cardViewAtIndexPath:`.
 
-5.) Modify the animation of the deck and the card being dragged by creating a ...
+5.) Modify the animation of the deck and the card being dragged by creating a `EPDeckViewAnimationManager` and setting it in `EPDeckView`. If you don't create a custom `EPDeckViewAnimationManager` then the default animation values will be applied.
 
 6.) To add the functionality to throw the cards left/right on your custom view's buttons, simply return the buttons of each card in the delegate functions `deckView(_:rightButtonForCardAtIndex:)` and `deckView(_:leftButtonForCardAtIndex:)`.
 
