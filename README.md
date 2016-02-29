@@ -22,7 +22,7 @@ Clone this repo and manually add the source files to project.
 ### CocoaPods
 If you are using [CocoaPods](https://cocoapods.org) just add in your podfile:
 
-`pod 'EPDeckView', '~> 0.1.0'`
+`pod 'EPDeckView', :git => 'https://github.com/EvansPie/EPDeckView.git'`
 
 
 ## Usage
