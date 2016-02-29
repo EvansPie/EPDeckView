@@ -63,7 +63,11 @@ public class EPDeckView: UIView {
     // MARK: Properties
     
     //  The animation manager holds the vars for the card dragging and deck view animations.
-    var deckViewAnimationManager: EPDeckViewAnimationManager!
+    var deckViewAnimationManager: EPDeckViewAnimationManager! {
+        didSet {
+            
+        }
+    }
     
     //  Holds the index of the top card on the deck view.
     private(set) var topCardIndex: Int = 0 {
