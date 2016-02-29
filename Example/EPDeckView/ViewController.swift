@@ -23,12 +23,32 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
         // Initialize and add the deck view.
         self.deckView.delegate = self
         self.deckView.dataSource = self
+        
+        
     }
-    
-
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        
+        let animationManager: EPDeckViewAnimationManager = EPDeckViewAnimationManager(frame: self.deckView.frame)
+        animationManager.actionMargin = self.view.frame.size.width / 2.2    // A bit less than half the view's width.
+        animationManager.rotationStrength = 320.0
+        animationManager.rotationMax = 360.0
+        animationManager.rotationAngle = 30.0
+        animationManager.scaleStrength = 4.0
+        animationManager.scaleMax = 0.93
+        animationManager.cardLeftFinishPoint = CGPointMake(-self.deckView.frame.width * 1.5, self.deckView.frame.height / 3.0)
+        animationManager.cardRightFinishPoint = CGPointMake(self.deckView.frame.width * 1.5, self.deckView.frame.height / 3.0)
+        
+        animationManager.deckAnimationDuration = 5.0
+        animationManager.deckAnchor = .BottomLeft
+        animationManager.deckMaxVisibleCards = 5
+        animationManager.deckCardAngleDelta = 7.0
+        animationManager.deckViewCardScaleDelta = 0.08
+        animationManager.deckCardAlphaDelta = 0.05
+        animationManager.deckCenter = CGPointMake(133, 300)
+        
+        //self.deckView.deckViewAnimationManager = animationManager
         
         self.cardViews = []
         self.deckView.reloadCards()
