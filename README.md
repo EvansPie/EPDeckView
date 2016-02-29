@@ -6,6 +6,8 @@
 [![License](https://img.shields.io/cocoapods/l/EPDeckView.svg?style=flat)](http://cocoapods.org/pods/EPDeckView)
 [![Platform](https://img.shields.io/cocoapods/p/EPDeckView.svg?style=flat)](http://cocoapods.org/pods/EPDeckView)
 
+![EPDeckView](http://postimg.org/image/y64dwujdz/)
+
 
 ## Requirements
 
