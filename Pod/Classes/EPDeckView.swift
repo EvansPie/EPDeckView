@@ -68,18 +68,18 @@ public class EPDeckView: UIView {
     //  Holds the index of the top card on the deck view.
     private(set) var topCardIndex: Int = 0 {
         didSet {
-            for cardView in self.cardViews {
+            for cardView in self.deck {
                 cardView.userInteractionEnabled = false
             }
             
-            if self.topCardIndex < self.cardViews.count {
-                self.cardViews[self.topCardIndex].userInteractionEnabled = true
+            if self.topCardIndex < self.deck.count {
+                self.deck[self.topCardIndex].userInteractionEnabled = true
             }
         }
     }
     
     //  Calculated cards' tranformations (angle, scale, alpha & center position) are stored in these arrays.
-    private(set) var cardViews: [EPCardView] = []
+    private(set) var deck: [EPCardView] = []
     private(set) var cardAnglesDegrees: [CGFloat] = []
     private(set) var cardScalePercentages: [CGFloat] = []
     private(set) var cardAlphas: [CGFloat] = []
@@ -115,7 +115,7 @@ public class EPDeckView: UIView {
             subview.removeFromSuperview()
         }
         
-        self.cardViews = []
+        self.deck = []
         
         for var i=0; i<self.dataSource?.numberOfCardsInDeckView(self); i++ {
             let cardView: EPCardView = self.dataSource!.deckView(self, cardViewAtIndexPath: i)
@@ -134,13 +134,13 @@ public class EPDeckView: UIView {
                 cardView.addSubview(leftButton)
             }
             
-            self.cardViews.append(cardView)
+            self.deck.append(cardView)
         }
         
         self.applyCardViewsInitialTransformation()
         
-        for var i=self.cardViews.count-1; i>=0; i-- {
-            let cardView: EPCardView = self.cardViews[i]
+        for var i=self.deck.count-1; i>=0; i-- {
+            let cardView: EPCardView = self.deck[i]
             cardView.alpha = self.cardAlphas[i]
             self.addSubview(cardView)
         }
@@ -151,7 +151,7 @@ public class EPDeckView: UIView {
     //  The function moveCardAtIndex(_:, direction:) moves the specified card of the index to the direction given
     //  (i.e. left or right).
     public func moveCardAtIndex(index: Int, toDirection direction: CardViewDirection) {
-        let cardView: EPCardView = self.cardViews[index]
+        let cardView: EPCardView = self.deck[index]
         
         switch direction {
         case .Right:
@@ -166,7 +166,7 @@ public class EPDeckView: UIView {
     //  The function moveTopCardToDirection(_:) moves the top card of the deck to the direction given (i.e. left
     //  or right).
     public func moveTopCardToDirection(direction: CardViewDirection) {
-        let cardView: EPCardView = self.cardViews[self.topCardIndex]
+        let cardView: EPCardView = self.deck[self.topCardIndex]
         
         switch direction {
         case .Right:
@@ -182,7 +182,7 @@ public class EPDeckView: UIView {
     //  of the DeckView.
     public func moveMovedCardBackToDeckViewTop() {
         if self.topCardIndex > 0 {
-            if let lastMovedCardView: EPCardView = self.cardViews[self.topCardIndex-1] {
+            if let lastMovedCardView: EPCardView = self.deck[self.topCardIndex-1] {
                 lastMovedCardView.moveToCenter()
             }
         }
@@ -219,7 +219,7 @@ public class EPDeckView: UIView {
     private func calculateCardAngles() {
         var tmpComputedCardAngles: [CGFloat] = []
         
-        for (i, _) in self.cardViews.enumerate() {
+        for (i, _) in self.deck.enumerate() {
             let tmpCardAngle = CGFloat(i) * self.deckViewAnimationManager.deckViewCardAngleDelta
             tmpComputedCardAngles.append(tmpCardAngle)
         }
@@ -231,7 +231,7 @@ public class EPDeckView: UIView {
     private func calculateCardScales() {
         var tmpComputedCardScalePercentages: [CGFloat] = []
         
-        for (i, _) in self.cardViews.enumerate() {
+        for (i, _) in self.deck.enumerate() {
             var tmpCardScale = 1 - CGFloat(i+1) * self.deckViewAnimationManager.deckViewCardScaleDelta
             
             if tmpCardScale > 1.0 {
@@ -252,7 +252,7 @@ public class EPDeckView: UIView {
     private func calculateCardAlphas() {
         var tmpComputedCardAlphas: [CGFloat] = []
         
-        for (i, _) in self.cardViews.enumerate() {
+        for (i, _) in self.deck.enumerate() {
             var tmpCardAlpha = 1 - CGFloat(i) * self.deckViewAnimationManager.deckViewCardAlphaDelta
             
             if tmpCardAlpha > 1.0 {
@@ -282,7 +282,7 @@ public class EPDeckView: UIView {
     private func transformCards() {
         self.transformedCardCenters = []
         
-        for (i, cardView) in self.cardViews.enumerate() {
+        for (i, cardView) in self.deck.enumerate() {
             cardView.transform = self.getCardViewTransformForIndex(i)
             cardView.anchorTo(self.deckViewAnimationManager.deckViewAnchor)
             self.transformedCardCenters.append(cardView.center)
@@ -315,7 +315,7 @@ extension EPDeckView: EPCardViewDelegate {
         switch gestureRecognizer.state {
         case UIGestureRecognizerState.Changed:
             
-            let cardViewsToTransform: [EPCardView] = Array(self.cardViews.suffixFrom(self.topCardIndex))
+            let cardViewsToTransform: [EPCardView] = Array(self.deck.suffixFrom(self.topCardIndex))
 
             for (i, cardViewToTransform) in cardViewsToTransform.enumerate() {
                 if i == 0 {
@@ -348,7 +348,7 @@ extension EPDeckView: EPCardViewDelegate {
     func cardView(cardView: EPCardView, afterSwipeMovedTo cardViewEndPoint: CardViewEndPoint) {
         
         if cardViewEndPoint == .Center {
-            let cardViewsToTransform: [EPCardView] = Array(self.cardViews.suffixFrom(self.topCardIndex))
+            let cardViewsToTransform: [EPCardView] = Array(self.deck.suffixFrom(self.topCardIndex))
             
             for (i, cardViewToTransform) in cardViewsToTransform.enumerate() {
                 UIView.animateWithDuration(self.deckViewAnimationManager.deckViewAnimationDuration,
@@ -378,7 +378,7 @@ extension EPDeckView: EPCardViewDelegate {
     
     //  The card moves out of the screen (left or right).
     func cardView(cardView: EPCardView, movingToDirection direction: CardViewDirection) {
-        let cardViewsToTransform: [EPCardView] = Array(self.cardViews.suffixFrom(self.topCardIndex))
+        let cardViewsToTransform: [EPCardView] = Array(self.deck.suffixFrom(self.topCardIndex))
         
         for (i, cardViewToTransform) in cardViewsToTransform.enumerate() {
             if i == 0 {
@@ -412,7 +412,7 @@ extension EPDeckView: EPCardViewDelegate {
     }
     
     func cardView(cardView: EPCardView, cardViewMovedTo cardViewEndPoint: CardViewEndPoint) {
-        let cardViewsToTransform: [EPCardView] = Array(self.cardViews.suffixFrom(self.topCardIndex))
+        let cardViewsToTransform: [EPCardView] = Array(self.deck.suffixFrom(self.topCardIndex))
         
         for (i, cardViewToTransform) in cardViewsToTransform.enumerate() {
             
