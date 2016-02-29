@@ -23,11 +23,15 @@ Alternatively use [CocoaPods](https://cocoapods.org) with Podfile:`pod 'EPDeckVi
 
 2.) Conform to `EPDeckViewDataSource` & `EPDeckViewDelegate` as you would with a `UITableView`.
 
-3.) Return the number of cards that you wish to add in the data source function `numberOfCardsInDeckView:`.
+3.) Return the number of cards that you wish to add in the data source function `numberOfCardsInDeckView(_:)`.
 
-4.) Create & return each card of the deck with `deckView(:, cardViewAtIndexPath:`.
+4.) Create & return each card of the deck with `deckView(_:cardViewAtIndexPath:`.
 
-5.) To add the functionality to throw the cards left/right on your custom view's buttons, simply return the buttons of each card in the delegate functions `deckView(:, rightButtonForCardAtIndex:)` and `deckView(:, leftButtonForCardAtIndex:)`
+5.) Modify the animation of the deck and the card being dragged by creating a ...
+
+6.) To add the functionality to throw the cards left/right on your custom view's buttons, simply return the buttons of each card in the delegate functions `deckView(_:rightButtonForCardAtIndex:)` and `deckView(_:leftButtonForCardAtIndex:)`.
+
+7.) Monitor the card's movement with the delegate function `deckView(_:cardAtIndex:movedToDirection:)` and the card's button tap with `deckView(_:didTapLeftButtonAtIndex:)` or `deckView(_:didTapRightButtonAtIndex:)`.
 
 
 ## Author
