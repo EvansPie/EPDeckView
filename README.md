@@ -41,7 +41,7 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
 }
 ```
 
-3) Return the number of cards that you wish to add in the deck.
+2) Return the number of cards that you wish to add in the deck, as you would do with `UITableViewDataSource`.
 
 ```swift
 func numberOfCardsInDeckView(deckView: EPDeckView) -> Int {
@@ -49,7 +49,7 @@ func numberOfCardsInDeckView(deckView: EPDeckView) -> Int {
 }
 ```
 
-4) Create your cards as you would do with `UITableViewCell'. Your cards must inherit `EPCardView`.
+3) Create your cards as you would do with `UITableViewCell'. Your cards must inherit `EPCardView`.
 ```swift
 func deckView(deckView: EPDeckView, cardViewAtIndexPath indexPath: Int) -> EPCardView {
     //  Create a TestView to be added as a card in the deck.
@@ -59,7 +59,7 @@ func deckView(deckView: EPDeckView, cardViewAtIndexPath indexPath: Int) -> EPCar
 ```
 
 
-5) Modify the animation of the deck and the card being dragged by creating a `EPDeckViewAnimationManager` and setting it in `EPDeckView`. If you don't create a custom `EPDeckViewAnimationManager` then the default animation values will be applied. If you have instantiated `EPDeckView` from a storyboard with autolayout, you must instantiate the `EPDeckViewAnimationManager` after `viewDidLayoutSubviews()`.
+4) Modify the animation of the deck and the card being dragged by creating a `EPDeckViewAnimationManager` and setting it in `EPDeckView`. If you don't create a custom `EPDeckViewAnimationManager` then the default animation values will be applied. If you have instantiated `EPDeckView` from a storyboard with autolayout, you must instantiate the `EPDeckViewAnimationManager` after `viewDidLayoutSubviews()`.
 
 ```swift
 override func viewDidAppear(animated: Bool) {
@@ -129,14 +129,19 @@ override func viewDidAppear(animated: Bool) {
     //  EPDeckViewAnimationManager
     self.deckView.deckViewAnimationManager = deckViewAnimationManager
 
-    self.cardViews = []
     self.deckView.reloadCards()
 }
 ```
 
-6) To add the functionality to throw the cards left/right on your custom view's buttons, simply return the buttons of each card in the delegate functions `deckView(_:rightButtonForCardAtIndex:)` and `deckView(_:leftButtonForCardAtIndex:)`.
+### Features
 
-7) Monitor the card's movement with the delegate function `deckView(_:cardAtIndex:movedToDirection:)` and the card's button tap with `deckView(_:didTapLeftButtonAtIndex:)` or `deckView(_:didTapRightButtonAtIndex:)`.
+1) To add the functionality to throw the cards left/right on your custom view's buttons, simply return the buttons of each card in the delegate functions `deckView(_:rightButtonForCardAtIndex:)` and `deckView(_:leftButtonForCardAtIndex:)`.
+
+2) Monitor the card's movement with the delegate function `deckView(_:cardAtIndex:movedToDirection:)` and the card's button tap with `deckView(_:didTapLeftButtonAtIndex:)` or `deckView(_:didTapRightButtonAtIndex:)`.
+
+3) To throw a card left or right use the `EPDeckView` function `moveCardAtIndex(_:toDirection:)`. To throw the top card of the deck left or right use `moveTopCardToDirection(_:)`.
+
+4) To bring back the last card use `EPDeckView` function `bringBackLastCardThrown()`.
 
 
 ## Author
