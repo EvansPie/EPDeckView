@@ -29,15 +29,23 @@ If you are using [CocoaPods](https://cocoapods.org) just add in your podfile:
 
 2) Conform to `EPDeckViewDataSource` & `EPDeckViewDelegate` as you would with a `UITableView`.
 
-3) Return the number of cards that you wish to add in the data source function 
+3) Return the number of cards that you wish to add in the deck:
 
 ```swift
 func numberOfCardsInDeckView(deckView: EPDeckView) -> Int {
-return 6
+    return 6
 }
 ```
 
-4) Create & return each card of the deck with `deckView(_:cardViewAtIndexPath:)`.
+4) Create & return each card of the deck:
+```swift
+func deckView(deckView: EPDeckView, cardViewAtIndexPath indexPath: Int) -> EPCardView {
+    //  Create a TestView to be added as a card in the deck.
+    let testView: TestView = TestView(frame: CGRectMake(0,0,240,240))
+    return testView
+}
+```
+
 
 5) Modify the animation of the deck and the card being dragged by creating a `EPDeckViewAnimationManager` and setting it in `EPDeckView`. If you don't create a custom `EPDeckViewAnimationManager` then the default animation values will be applied.
 
