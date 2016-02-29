@@ -11,8 +11,9 @@ import EPDeckView
 
 class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate {
     
-    private var deckView: EPDeckView!
+    //private var deckView: EPDeckView!
     private var cardViews: [EPCardView] = []
+    @IBOutlet weak var deckView: EPDeckView!
     
     
     //  MARK: - INITIALIZATION
@@ -20,13 +21,11 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
         super.viewDidLoad()
         
         // Initialize and add the deck view.
-        self.deckView = EPDeckView(frame: self.view.frame)
         self.deckView.delegate = self
         self.deckView.dataSource = self
-        self.view.addSubview(self.deckView)
+    }
+    
 
-        self.view.sendSubviewToBack(self.deckView)
-        
         
         self.deckView.reloadCards()
     }
