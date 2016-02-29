@@ -27,27 +27,7 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
 
         self.view.sendSubviewToBack(self.deckView)
         
-        // Create the card views.
-        let numberOfCards: Int = 10
         
-        for var i=0; i<numberOfCards; i++ {
-            let testView: TestView = TestView(frame: CGRectMake(0,0,240,240))
-            testView.center = self.deckView.center
-            
-            testView.layer.masksToBounds = false;
-            testView.layer.shadowOffset = CGSizeMake(0, 0);
-            testView.layer.shadowRadius = 25;
-            testView.layer.shadowOpacity = 0.25;
-            
-            if i%2 == 0 {
-                testView.profileImageView.image = UIImage(named: "darth_vader")
-                testView.displayNameLabel.text = "Darth Vader"
-            }
-
-            self.cardViews.append(testView)
-        }
-
-        // Reload the deck view.
         self.deckView.reloadCards()
     }
     
@@ -57,6 +37,7 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
     
     //  MARK: - BUTTON ACTIONS
     @IBAction func reloadCardsButtonTapped(sender: AnyObject) {
+        self.cardViews = []
         self.deckView.reloadCards()
     }
     
@@ -75,11 +56,26 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
     
     //  MARK: - EPDECKVIEW DATASOURCE & DELEGATE
     func numberOfCardsInDeckView(deckView: EPDeckView) -> Int {
-        return self.cardViews.count
+        return 3
     }
     
     func deckView(deckView: EPDeckView, cardViewAtIndexPath indexPath: Int) -> EPCardView {
-        return self.cardViews[indexPath]
+        let testView: TestView = TestView(frame: CGRectMake(0,0,240,240))
+        testView.center = self.deckView.center
+        
+        testView.layer.masksToBounds = false;
+        testView.layer.shadowOffset = CGSizeMake(0, 0);
+        testView.layer.shadowRadius = 25;
+        testView.layer.shadowOpacity = 0.25;
+        
+        if indexPath%2 == 0 {
+            testView.profileImageView.image = UIImage(named: "darth_vader")
+            testView.displayNameLabel.text = "Darth Vader"
+        }
+        
+        self.cardViews.append(testView)
+        
+        return testView
     }
     
     func deckView(deckView: EPDeckView, rightButtonForIndex index: Int) -> UIButton? {
