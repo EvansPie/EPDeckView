@@ -18,12 +18,12 @@ import UIKit
 //
 //  numberOfCardsInDeckView(_:) returns the number of cards that the DeckView will hold.
 //
-//  deckView(_:, cardViewAtIndexPath_:) returns the view (that must be a subclass of the CardView) for each index.
+//  deckView(_:, cardViewAtIndex:) returns the view (that must be a subclass of the CardView) for each index.
 //
 
 @objc public protocol EPDeckViewDataSource : NSObjectProtocol {
     func numberOfCardsInDeckView(deckView: EPDeckView) -> Int
-    func deckView(deckView: EPDeckView, cardViewAtIndexPath indexPath: Int) -> EPCardView
+    func deckView(deckView: EPDeckView, cardViewAtIndex index: Int) -> EPCardView
 }
 
 
@@ -138,7 +138,7 @@ public class EPDeckView: UIView {
         self.deck = []
         
         for var i=0; i<self.dataSource?.numberOfCardsInDeckView(self); i++ {
-            let cardView: EPCardView = self.dataSource!.deckView(self, cardViewAtIndexPath: i)
+            let cardView: EPCardView = self.dataSource!.deckView(self, cardViewAtIndex: i)
             cardView.center = self.deckViewAnimationManager.deckCenter
             cardView.delegate = self
             
@@ -198,7 +198,7 @@ public class EPDeckView: UIView {
     
     //  The function moveMovedCardBackToDeckViewTop() moves the the last card that left the deck, back to the top
     //  of the DeckView.
-    public func moveMovedCardBackToDeckViewTop() {
+    public func bringBackLastCardThrown() {
         if self.topCardIndex > 0 {
             if let lastMovedCardView: EPCardView = self.deck[self.topCardIndex-1] {
                 lastMovedCardView.moveToCenter()

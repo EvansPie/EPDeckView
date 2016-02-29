@@ -117,7 +117,7 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
     }
     
     @IBAction func previousCardButtonTapped(sender: AnyObject) {
-        self.deckView.moveMovedCardBackToDeckViewTop()
+        self.deckView.bringBackLastCardThrown()
     }
     
     
@@ -126,7 +126,7 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
         return 6
     }
     
-    func deckView(deckView: EPDeckView, cardViewAtIndexPath indexPath: Int) -> EPCardView {
+    func deckView(deckView: EPDeckView, cardViewAtIndex index: Int) -> EPCardView {
         //  Create a TestView to be added as a card in the deck.
         
         let testView: TestView = TestView(frame: CGRectMake(0,0,240,240))
@@ -136,19 +136,19 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
         testView.layer.shadowRadius = 25;
         testView.layer.shadowOpacity = 0.25;
         
-        if indexPath%6 == 0 {
+        if index%6 == 0 {
             testView.profileImageView.image = UIImage(named: "darth_vader")
             testView.displayNameLabel.text = "Darth Vader"
-        } else if indexPath%6 == 1 {
+        } else if index%6 == 1 {
             testView.profileImageView.image = UIImage(named: "cthulhu")
             testView.displayNameLabel.text = "Cthulhu"
-        } else if indexPath%6 == 2 {
+        } else if index%6 == 2 {
             testView.profileImageView.image = UIImage(named: "john")
             testView.displayNameLabel.text = "John Smith"
-        } else if indexPath%6 == 3 {
+        } else if index%6 == 3 {
             testView.profileImageView.image = UIImage(named: "cylon")
             testView.displayNameLabel.text = "Cylon"
-        } else if indexPath%6 == 4 {
+        } else if index%6 == 4 {
             testView.profileImageView.image = UIImage(named: "weeping_angel")
             testView.displayNameLabel.text = "Weeping Angel"
         }
