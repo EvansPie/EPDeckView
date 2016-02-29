@@ -11,7 +11,7 @@
 import Foundation
 import UIKit
 
-class EPDeckViewAnimationManager {
+public class EPDeckViewAnimationManager {
     
     // MARK: CARDVIEW DRAGGING ANIMATION VARS
     //________________________________________________________________________________________
@@ -69,25 +69,23 @@ class EPDeckViewAnimationManager {
     //  The deck's top card's center.
     var deckViewCenter: CGPoint = CGPointZero
     
-    
-    // MARK: - Initialization
-    init() {
-        self.deckView = nil
-        self.deckViewCenter = CGPointMake(UIScreen.mainScreen().bounds.size.width/2, UIScreen.mainScreen().bounds.size.height/2)
-        self.actionMargin = UIScreen.mainScreen().bounds.size.width/2
-        
-        self.cardLeftFinishPoint = CGPointMake(-UIScreen.mainScreen().bounds.size.width * 1.5, UIScreen.mainScreen().bounds.size.height / 3.0)
-        self.cardRightFinishPoint = CGPointMake(UIScreen.mainScreen().bounds.size.width * 1.5, UIScreen.mainScreen().bounds.size.height / 3.0)
+    var frame: CGRect? {
+        didSet {
+            
+        }
     }
     
     
-    init(deckView: UIView) {
-        self.deckView = deckView
-        self.deckViewCenter = self.deckView!.center
-        self.actionMargin = self.deckView!.bounds.width / 2
+    // MARK: - Initialization
+
+    init(frame: CGRect) {
+        self.frame = frame
         
-        self.cardLeftFinishPoint = CGPointMake(-self.deckView!.bounds.width * 1.5, self.deckView!.bounds.height / 3.0)
-        self.cardRightFinishPoint = CGPointMake(self.deckView!.bounds.width * 1.5, self.deckView!.bounds.height / 3.0)
+        self.deckViewCenter = CGPointMake((self.frame!.origin.x + self.frame!.size.width/2), (self.frame!.origin.y + self.frame!.size.height/2))
+        self.actionMargin = self.frame!.width / 2
+        
+        self.cardLeftFinishPoint = CGPointMake(-self.frame!.width * 1.5, self.frame!.height / 3.0)
+        self.cardRightFinishPoint = CGPointMake(self.frame!.width * 1.5, self.frame!.height / 3.0)
     }
     
 }
