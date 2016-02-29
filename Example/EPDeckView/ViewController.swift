@@ -23,32 +23,74 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
         // Initialize and add the deck view.
         self.deckView.delegate = self
         self.deckView.dataSource = self
-        
-        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        let animationManager: EPDeckViewAnimationManager = EPDeckViewAnimationManager(frame: self.deckView.frame)
-        animationManager.actionMargin = self.view.frame.size.width / 2.2    // A bit less than half the view's width.
-        animationManager.rotationStrength = 320.0
-        animationManager.rotationMax = 360.0
-        animationManager.rotationAngle = 30.0
-        animationManager.scaleStrength = 4.0
-        animationManager.scaleMax = 0.93
-        animationManager.cardLeftFinishPoint = CGPointMake(-self.deckView.frame.width * 1.5, self.deckView.frame.height / 3.0)
-        animationManager.cardRightFinishPoint = CGPointMake(self.deckView.frame.width * 1.5, self.deckView.frame.height / 3.0)
+        //  If you want to set custom values in the EPDeckViewAnimationManager then it should
+        //  be set in the viewDidAppear func.
+        let deckViewAnimationManager: EPDeckViewAnimationManager = EPDeckViewAnimationManager(frame: self.deckView.frame)
         
-        animationManager.deckAnimationDuration = 5.0
-        animationManager.deckAnchor = .BottomLeft
-        animationManager.deckMaxVisibleCards = 5
-        animationManager.deckCardAngleDelta = 7.0
-        animationManager.deckViewCardScaleDelta = 0.08
-        animationManager.deckCardAlphaDelta = 0.05
-        animationManager.deckCenter = CGPointMake(133, 300)
+        //  The actionMargin is measured from the card's center x. Usually it can be set to a 
+        //  bit less than half the deckView's width.
+        deckViewAnimationManager.actionMargin = self.deckView.frame.size.width / 2.2
         
-        //self.deckView.deckViewAnimationManager = animationManager
+        //  The lower this rotationStrength gets, the faster the card rotates. This value is 
+        //  also taken into account in the scaling of the card.
+        deckViewAnimationManager.rotationStrength = 300.0
+        
+        //  This is the max angle allowed to the rotation while being dragged.
+        deckViewAnimationManager.rotationMax = 360.0
+        
+        //  This is the angle that is reached when the distance of the card from the center equals
+        //  the roatation strength. Therefore, with the above values, when the card is distanced
+        //  100px from the center (1/3 of the rotation strength) of the deckView, the card will 
+        //  have rotated 30 degrees (1/3 of the roatation angle).
+        deckViewAnimationManager.rotationAngle = 90.0
+        
+        //  The smaller the scale strength, the quicker it scales down while the card is dragged, 
+        //  till it reaches scaleMax.
+        deckViewAnimationManager.scaleStrength = 4.0
+        
+        //  scaleMax should received values 0.0 ~> 1.0. It represents the max downscaling that 
+        //  is allowed to be applied on the card while being dragged.
+        deckViewAnimationManager.scaleMax = 0.5
+        
+        //  cardLeftFinishPoint & cardRightFinishPoint represent the points that the card will be 
+        //  moved after being dragged, if it's left outside the actionMargin.
+        deckViewAnimationManager.cardLeftFinishPoint = CGPointMake(-self.deckView.frame.width * 1.5, self.deckView.frame.height / 3.0)
+        deckViewAnimationManager.cardRightFinishPoint = CGPointMake(self.deckView.frame.width * 1.5, self.deckView.frame.height / 3.0)
+        
+        //  The deckAnimationDuration represents the duration of the animation that the card being
+        //  dragged needs to return to the deck or move out of the screen. It is also the animation
+        //  duration that the rest of the cards in the deck animate.
+        deckViewAnimationManager.deckAnimationDuration = 0.35
+        
+        //  The dckAnchor represents the anchor of the deck. It can take 4 values: TopLeft, TopRight,
+        //  BottomRight or BottomLeft.
+        deckViewAnimationManager.deckAnchor = .BottomLeft
+        
+        //  deckMaxVisibleCards represents the max number of visible cards in the deck. I.e. if the
+        //  deck has 52 cards but the deckMaxVisibleCards is set to 10, then card 11 to 50 will be
+        //  transparent. It doesn't account for transparent cards.
+        deckViewAnimationManager.deckMaxVisibleCards = 3
+        
+        //  deckCardAngleDelta sets the angle difference between the cards in the deck.
+        deckViewAnimationManager.deckCardAngleDelta = 7.0
+        
+        //  deckViewCardScaleDelta sets the scale difference between the cards in the deck.
+        deckViewAnimationManager.deckViewCardScaleDelta = 0.08
+        
+        //  deckCardAlphaDelta sets the alpha channel difference between the cards in the deck.
+        deckViewAnimationManager.deckCardAlphaDelta = 0.05
+        
+        //  deckCardAlphaDelta sets the deck's center.
+        deckViewAnimationManager.deckCenter = CGPointMake(self.deckView.center.x, self.deckView.center.y - 40.0)
+        
+        //  Not setting a custom EPDeckViewAnimationManager will set the default value of an
+        //  EPDeckViewAnimationManager
+        self.deckView.deckViewAnimationManager = deckViewAnimationManager
         
         self.cardViews = []
         self.deckView.reloadCards()
@@ -57,8 +99,6 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
@@ -89,21 +129,28 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
     
     //  MARK: - EPDECKVIEW DATASOURCE & DELEGATE
     func numberOfCardsInDeckView(deckView: EPDeckView) -> Int {
-        return 3
+        return 8
     }
     
     func deckView(deckView: EPDeckView, cardViewAtIndexPath indexPath: Int) -> EPCardView {
+        //  Create a TestView to be added as a card in the deck.
+        
         let testView: TestView = TestView(frame: CGRectMake(0,0,240,240))
         testView.center = self.deckView.center
-        
         testView.layer.masksToBounds = false;
         testView.layer.shadowOffset = CGSizeMake(0, 0);
         testView.layer.shadowRadius = 25;
         testView.layer.shadowOpacity = 0.25;
         
-        if indexPath%2 == 0 {
+        if indexPath%4 == 0 {
             testView.profileImageView.image = UIImage(named: "darth_vader")
             testView.displayNameLabel.text = "Darth Vader"
+        } else if indexPath%4 == 1 {
+            testView.profileImageView.image = UIImage(named: "cthulhu")
+            testView.displayNameLabel.text = "Cthulhu"
+        } else if indexPath%4 == 2 {
+            testView.profileImageView.image = UIImage(named: "john")
+            testView.displayNameLabel.text = "John Smith"
         }
         
         self.cardViews.append(testView)
