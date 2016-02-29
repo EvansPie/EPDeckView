@@ -31,6 +31,9 @@ If you are using [CocoaPods](https://cocoapods.org) just add in your podfile:
 class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate {
     @IBOutlet weak var deckView: EPDeckView!
 
+    // Array that keeps a reference to our cards.
+    private var cardViews: [EPCardView] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -52,9 +55,13 @@ func numberOfCardsInDeckView(deckView: EPDeckView) -> Int {
 
 3) Create your cards as you would do with `UITableViewCell`. Your cards must inherit `EPCardView`.
 ```swift
-func deckView(deckView: EPDeckView, cardViewAtIndexPath indexPath: Int) -> EPCardView {
+func deckView(deckView: EPDeckView, cardViewAtIndex index: Int) -> EPCardView {
     //  Create a TestView to be added as a card in the deck.
     let testView: TestView = TestView(frame: CGRectMake(0,0,240,240))
+
+    //  Keep a reference so you can pass the nib's buttons to the delegate functions.
+    self.cardViews.append(testView)
+
     return testView
 }
 ```
@@ -140,6 +147,8 @@ override func viewDidAppear(animated: Bool) {
     //  EPDeckViewAnimationManager
     self.deckView.deckViewAnimationManager = deckViewAnimationManager
 
+    //  Empty the local reference array before reloading the cards.
+    self.cardViews = []
     self.deckView.reloadCards()
 }
 ```
@@ -161,7 +170,7 @@ func deckView(deckView: EPDeckView, leftButtonForCardAtIndex index: Int) -> UIBu
 3) Monitor the card's movement and the card's button tap.
 
 ```swift
-    func deckView(deckView: EPDeckView, cardAtIndex index: Int, movedToDirection direction: CardViewDirection) {
+func deckView(deckView: EPDeckView, cardAtIndex index: Int, movedToDirection direction: CardViewDirection) {
     print("Card at index \(index) moved to \(direction.description()).")
 }
 
