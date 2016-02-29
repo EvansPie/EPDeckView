@@ -31,9 +31,11 @@ If you are using [CocoaPods](https://cocoapods.org) just add in your podfile:
 
 3) Return the number of cards that you wish to add in the data source function 
 
-`func numberOfCardsInDeckView(deckView: EPDeckView) -> Int {;
-return 6;
-}`
+```swift
+func numberOfCardsInDeckView(deckView: EPDeckView) -> Int {
+return 6
+}
+```
 
 4) Create & return each card of the deck with `deckView(_:cardViewAtIndexPath:)`.
 
