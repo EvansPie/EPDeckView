@@ -9,23 +9,17 @@
 Pod::Spec.new do |s|
   s.name             = "EPDeckView"
   s.version          = "0.1.0"
-  s.summary          = "EPDeckView provides a deck of cards that can be swiped or thrown left/right."
+  s.summary          = "EPDeckView is an easy-to-use deck of cards that can be swiped or thrown left/right."
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!  
   s.description      = <<-DESC
-EPDeckView is inspired by the Tinder app and provides its functionlity.
+EPDeckView is inspired by the Tinder app and provides its core functionality, while it's easy to customize it. You can swipe the cards of the deck left/right or throw them with a button click.
                        DESC
 
   s.homepage         = "https://github.com/EvansPie/EPDeckView"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Evangelos Pittas" => "evangelospittas@gmail.com" }
   s.source           = { :git => "https://github.com/EvansPie/EPDeckView.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/hopinside'
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true
@@ -35,7 +29,4 @@ EPDeckView is inspired by the Tinder app and provides its functionlity.
     'EPDeckView' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
