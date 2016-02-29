@@ -13,14 +13,21 @@
 
 
 ## Installation
-Just add the EPDeckView.swift, EPCardView, EPDeckViewAnimationManager & Extensions.swift files to your project or use
-[CocoaPods](https://cocoapods.org) with Podfile:`ruby pod 'EPDeckView', '~> 0.1.0'`
+Just add the EPDeckView.swift, EPCardView, EPDeckViewAnimationManager & Extensions.swift files to your project.
+
+Alternatively use [CocoaPods](https://cocoapods.org) with Podfile:`pod 'EPDeckView', '~> 0.1.0'`
 
 
 ## Usage
 1) Create a new view inheriting `EPDeckView` and add it on your view.
 
-2) Conform to `EPDeckViewDataSource` & `EPDeckViewDelegate` as you would with a `UITableView`.
+2.) Conform to `EPDeckViewDataSource` & `EPDeckViewDelegate` as you would with a `UITableView`.
+
+3) Return the number of cards that you wish to add in the data source function `numberOfCardsInDeckView:`.
+
+4) Create & return each card of the deck with `deckView(:, cardViewAtIndexPath:`.
+
+
 
 ## Requirements
 
