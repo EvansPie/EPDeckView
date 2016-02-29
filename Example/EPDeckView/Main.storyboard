@@ -18,6 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfw-mr-pg1" customClass="EPDeckView" customModule="EPDeckView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyc-5R-1qd">
                                 <rect key="frame" x="250" y="28" width="100" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -62,15 +66,22 @@
                         <color key="backgroundColor" red="0.35294117647058826" green="0.71764705882352942" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="TUB-LY-zgi" secondAttribute="trailing" id="Fic-sT-7S1"/>
+                            <constraint firstItem="wfw-mr-pg1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="L6C-W7-O1Z"/>
                             <constraint firstAttribute="leadingMargin" secondItem="wSe-fT-HrQ" secondAttribute="leading" id="LlH-XN-d3S"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="wfw-mr-pg1" secondAttribute="bottom" id="QEd-KT-DRU"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="wSe-fT-HrQ" secondAttribute="bottom" constant="20" id="SGJ-Af-ykX"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="TUB-LY-zgi" secondAttribute="bottom" constant="20" id="VG3-hi-FuP"/>
+                            <constraint firstAttribute="trailing" secondItem="wfw-mr-pg1" secondAttribute="trailing" id="Xh8-Fu-Q3Q"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Hoe-Xr-ymI" secondAttribute="leading" id="iav-mG-tbk"/>
                             <constraint firstItem="Hoe-Xr-ymI" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="7" id="oLJ-t1-EXg"/>
                             <constraint firstItem="xyc-5R-1qd" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="sJi-m6-StA"/>
+                            <constraint firstItem="wfw-mr-pg1" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="txa-Ih-D4j"/>
                             <constraint firstItem="xyc-5R-1qd" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="wQe-oQ-aah"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="deckView" destination="wfw-mr-pg1" id="XhX-bp-3uA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
