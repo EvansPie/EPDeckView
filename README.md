@@ -5,9 +5,22 @@
 [![License](https://img.shields.io/cocoapods/l/EPDeckView.svg?style=flat)](http://cocoapods.org/pods/EPDeckView)
 [![Platform](https://img.shields.io/cocoapods/p/EPDeckView.svg?style=flat)](http://cocoapods.org/pods/EPDeckView)
 
-## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+## Requirements
+
+- iOS 8.0+
+- Xcode 7.2
+
+
+## Installation
+Just add the EPDeckView.swift, EPCardView, EPDeckViewAnimationManager & Extensions.swift files to your project or use
+[CocoaPods](https://cocoapods.org) with Podfile:`ruby pod 'EPDeckView', '~> 0.1.0'`
+
+
+## Usage
+1) Create a new view inheriting `EPDeckView` and add it on your view.
+
+2) Conform to `EPDeckViewDataSource` & `EPDeckViewDelegate` as you would with a `UITableView`.
 
 ## Requirements
 
