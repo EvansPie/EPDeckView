@@ -23,6 +23,7 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
         // Set the deckView's delegate & data source.
         self.deckView.delegate = self
         self.deckView.dataSource = self
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -44,9 +45,9 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
         deckViewAnimationManager.rotationMax = 360.0
         
         //  This is the angle that is reached when the distance of the card from the center equals
-        //  the roatation strength. Therefore, with the above values, when the card is distanced
+        //  the rotation strength. Therefore, with the above values, when the card is distanced
         //  100px from the center (1/3 of the rotation strength) of the deckView, the card will 
-        //  have rotated 30 degrees (1/3 of the roatation angle).
+        //  have rotated 30 degrees (1/3 of the rotation angle).
         deckViewAnimationManager.rotationAngle = 90.0
         
         //  The smaller the scale strength, the quicker it scales down while the card is dragged, 
