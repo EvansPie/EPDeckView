@@ -94,16 +94,26 @@ public class EPDeckView: UIView {
     
     public required override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        // Initialize the default DeckViewAnimationManager. It may be replaced afterwards.
-        self.deckViewAnimationManager = EPDeckViewAnimationManager(deckView: self)
+        self.addObserver(self, forKeyPath: "center", options: NSKeyValueObservingOptions.Old, context: nil)
     }
     
     required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        
-        // Initialize the default DeckViewAnimationManager. It may be replaced afterwards.
-        self.deckViewAnimationManager = EPDeckViewAnimationManager(deckView: self)
+        self.addObserver(self, forKeyPath: "center", options: NSKeyValueObservingOptions.Old, context: nil)
+    }
+    
+    deinit {
+        self.removeObserver(self, forKeyPath: "frame")
+    }
+    
+    public override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
+
+        if keyPath != nil && object != nil {
+            if keyPath! == "center" && self == object as? EPDeckView {
+                // Initialize the default DeckViewAnimationManager. It may be replaced afterwards.
+                self.deckViewAnimationManager = EPDeckViewAnimationManager(frame: self.frame)
+            }
+        }
     }
     
     
