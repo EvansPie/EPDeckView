@@ -58,13 +58,14 @@ func deckView(deckView: EPDeckView, cardViewAtIndexPath indexPath: Int) -> EPCar
 }
 ```
 
-That's it! Don't forget to reload your deck (after `viewDidLayoutSubviews()` if you are using utolayout).
+That's it! Don't forget to reload your deck (after `viewDidLayoutSubviews()` if you are using autolayout).
 
 ```swift
 override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     self.deckView.reloadCards()
 }
+```
 
 ### Features
 
