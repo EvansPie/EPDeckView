@@ -83,20 +83,12 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
     }
     
     func deckView(deckView: EPDeckView, rightButtonForIndex index: Int) -> UIButton? {
-        //let testView: TestView = self.cardViews[index] as! TestView
-        //testView.checkButton.frame = CGRectMake(166, 186, 23, 23)
-        
-        let rightButton: UIButton = UIButton(frame: CGRectMake(166,186,23,23))
-        rightButton.backgroundColor = UIColor.clearColor()
-        rightButton.setImage(UIImage(named: "DoneBTN"), forState: .Normal)
-        
+        let rightButton: UIButton = (self.cardViews[index] as! TestView).checkButton
         return rightButton
     }
     
     func deckView(deckView: EPDeckView, leftButtonForIndex index: Int) -> UIButton? {
-        let leftButton: UIButton = UIButton(frame: CGRectMake(51,186,60,30))
-        leftButton.backgroundColor = UIColor.clearColor()
-        leftButton.setImage(UIImage(named: "CancelBTN"), forState: .Normal)
+        let leftButton: UIButton = (self.cardViews[index] as! TestView).cancelButton
         return leftButton
     }
     
