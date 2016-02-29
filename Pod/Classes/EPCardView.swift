@@ -26,6 +26,15 @@ protocol EPCardViewDelegate {
 
 @objc public enum CardViewDirection: Int {
     case Left = 0, Right
+    
+    public func description() -> String {
+        switch self {
+        case .Left:
+            return ".Left"
+        case .Right:
+            return ".Right"
+        }
+    }
 }
 
 
