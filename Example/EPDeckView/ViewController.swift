@@ -93,8 +93,17 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
     }
     
     func deckView(deckView: EPDeckView, cardAtIndex index: Int, movedToDirection direction: CardViewDirection) {
-        
+        print("Card at index \(index) moved to \(direction.description()).")
     }
+    
+    func deckView(deckView: EPDeckView, didTapLeftButtonAtIndex index: Int) {
+        print("Left button of card at index: \(index) tapped.")
+    }
+    
+    func deckView(deckView: EPDeckView, didTapRightButtonAtIndex index: Int) {
+        print("Right button of card at index: \(index) tapped.")
+    }
+
 }
 
 
