@@ -19,26 +19,16 @@ Alternatively use [CocoaPods](https://cocoapods.org) with Podfile:`pod 'EPDeckVi
 
 
 ## Usage
-1) Create a new view inheriting `EPDeckView` and add it on your view.
+1.) Create a new view inheriting `EPDeckView` and add it on your view.
 
 2.) Conform to `EPDeckViewDataSource` & `EPDeckViewDelegate` as you would with a `UITableView`.
 
-3) Return the number of cards that you wish to add in the data source function `numberOfCardsInDeckView:`.
+3.) Return the number of cards that you wish to add in the data source function `numberOfCardsInDeckView:`.
 
-4) Create & return each card of the deck with `deckView(:, cardViewAtIndexPath:`.
+4.) Create & return each card of the deck with `deckView(:, cardViewAtIndexPath:`.
 
+5.) To add the functionality to throw the cards left/right on your custom view's buttons, simply return the buttons of each card in the delegate functions `deckView(:, rightButtonForCardAtIndex:)` and `deckView(:, leftButtonForCardAtIndex:)`
 
-
-## Requirements
-
-## Installation
-
-EPDeckView is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod "EPDeckView"
-```
 
 ## Author
 
