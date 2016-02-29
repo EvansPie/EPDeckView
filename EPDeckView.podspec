@@ -18,7 +18,7 @@ EPDeckView is inspired by the Tinder app and provides its core functionality, wh
   s.homepage         = "https://github.com/EvansPie/EPDeckView"
   s.license          = 'MIT'
   s.author           = { "Evangelos Pittas" => "evangelospittas@gmail.com" }
-  s.source           = { :git => "https://github.com/EvansPie/EPDeckView.git" }
+  s.source           = { :git => "https://github.com/EvansPie/EPDeckView.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/hopinside'
 
   s.platform     = :ios, '8.0'
