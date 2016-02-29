@@ -25,9 +25,21 @@ If you are using [CocoaPods](https://cocoapods.org) just add in your podfile:
 
 
 ## Usage
-1) Create a new view inheriting `EPDeckView` and add it on your view.
+1) Create a new view (from storyboard or programmatically) inheriting `EPDeckView` and add it on your view. Conform to `EPDeckViewDataSource` & `EPDeckViewDelegate` as you would with a `UITableView` and set the view's delegate & data source.
+```swift
+class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate {
+    @IBOutlet weak var deckView: EPDeckView!
 
-2) Conform to `EPDeckViewDataSource` & `EPDeckViewDelegate` as you would with a `UITableView`.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Set the deckView's delegate & data source.
+        self.deckView.delegate = self
+        self.deckView.dataSource = self
+
+    }
+}
+```
 
 3) Return the number of cards that you wish to add in the deck.
 
@@ -69,9 +81,9 @@ override func viewDidAppear(animated: Bool) {
     deckViewAnimationManager.rotationMax = 360.0
 
     //  This is the angle that is reached when the distance of the card from the center equals
-    //  the roatation strength. Therefore, with the above values, when the card is distanced
+    //  the rotation strength. Therefore, with the above values, when the card is distanced
     //  100px from the center (1/3 of the rotation strength) of the deckView, the card will 
-    //  have rotated 30 degrees (1/3 of the roatation angle).
+    //  have rotated 30 degrees (1/3 of the rotation angle).
     deckViewAnimationManager.rotationAngle = 90.0
 
     //  The smaller the scale strength, the quicker it scales down while the card is dragged, 
