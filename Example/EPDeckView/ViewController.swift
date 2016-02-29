@@ -20,7 +20,7 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Initialize and add the deck view.
+        // Set the deckView's delegate & data source.
         self.deckView.delegate = self
         self.deckView.dataSource = self
     }
@@ -100,13 +100,6 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
         super.didReceiveMemoryWarning()
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-    }
     
     //  MARK: - BUTTON ACTIONS
     @IBAction func reloadCardsButtonTapped(sender: AnyObject) {
@@ -153,6 +146,7 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
             testView.displayNameLabel.text = "John Smith"
         }
         
+        //  Keep a reference so you can pass the nib's buttons to the delegate functions.
         self.cardViews.append(testView)
         
         return testView
@@ -178,8 +172,6 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
     
     func deckView(deckView: EPDeckView, didTapRightButtonAtIndex index: Int) {
         print("Right button of card at index: \(index) tapped.")
-        
-        //
     }
 
 }
