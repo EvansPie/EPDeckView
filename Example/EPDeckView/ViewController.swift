@@ -33,11 +33,11 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
         
         //  The actionMargin is measured from the card's center x. Usually it can be set to a 
         //  bit less than half the deckView's width.
-        deckViewAnimationManager.actionMargin = self.deckView.frame.size.width / 2.2
+        deckViewAnimationManager.actionMargin = self.deckView.frame.size.width / 3.8
         
         //  The lower this rotationStrength gets, the faster the card rotates. This value is 
         //  also taken into account in the scaling of the card.
-        deckViewAnimationManager.rotationStrength = 300.0
+        deckViewAnimationManager.rotationStrength = 320.0
         
         //  This is the max angle allowed to the rotation while being dragged.
         deckViewAnimationManager.rotationMax = 360.0
@@ -46,7 +46,7 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
         //  the rotation strength. Therefore, with the above values, when the card is distanced
         //  100px from the center (1/3 of the rotation strength) of the deckView, the card will 
         //  have rotated 30 degrees (1/3 of the rotation angle).
-        deckViewAnimationManager.rotationAngle = 90.0
+        deckViewAnimationManager.rotationAngle = 30.0
         
         //  The smaller the scale strength, the quicker it scales down while the card is dragged, 
         //  till it reaches scaleMax.
@@ -120,7 +120,7 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
     
     //  MARK: - EPDECKVIEW DATASOURCE & DELEGATE
     func numberOfCardsInDeckView(deckView: EPDeckView) -> Int {
-        return 6
+        return 5
     }
     
     func deckView(deckView: EPDeckView, cardViewAtIndex index: Int) -> EPCardView {
@@ -133,21 +133,21 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
         testView.layer.shadowRadius = 25;
         testView.layer.shadowOpacity = 0.25;
         
-        if index%6 == 0 {
+        if index%5 == 0 {
             testView.profileImageView.image = UIImage(named: "darth_vader")
             testView.displayNameLabel.text = "Darth Vader"
-        } else if index%6 == 1 {
+        } else if index%5 == 1 {
             testView.profileImageView.image = UIImage(named: "cthulhu")
             testView.displayNameLabel.text = "Cthulhu"
-        } else if index%6 == 2 {
-            testView.profileImageView.image = UIImage(named: "john")
-            testView.displayNameLabel.text = "John Smith"
-        } else if index%6 == 3 {
+        } else if index%5 == 2 {
             testView.profileImageView.image = UIImage(named: "cylon")
             testView.displayNameLabel.text = "Cylon"
-        } else if index%6 == 4 {
+        } else if index%5 == 3 {
             testView.profileImageView.image = UIImage(named: "weeping_angel")
             testView.displayNameLabel.text = "Weeping Angel"
+        } else if index%5 == 4 {
+            testView.profileImageView.image = UIImage(named: "terminator")
+            testView.displayNameLabel.text = "Terminator"
         }
         
         //  Keep a reference so you can pass the nib's buttons to the delegate functions.
