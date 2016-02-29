@@ -11,7 +11,7 @@
 import Foundation
 import UIKit
 
-enum EPDeckViewAnchor {
+public enum EPDeckViewAnchor {
     case TopLeft, TopRight, BottomRight, BottomLeft
 }
 

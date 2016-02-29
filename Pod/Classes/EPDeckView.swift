@@ -65,9 +65,11 @@ public class EPDeckView: UIView {
     //  The animation manager holds the vars for the card dragging and deck view animations.
     public var deckViewAnimationManager: EPDeckViewAnimationManager! {
         didSet {
-            
+            self.allowDeckViewAnimationManagerModify = false
         }
     }
+    
+    private var allowDeckViewAnimationManagerModify: Bool = true
     
     //  Holds the index of the top card on the deck view.
     private(set) var topCardIndex: Int = 0 {
@@ -114,8 +116,12 @@ public class EPDeckView: UIView {
 
         if keyPath != nil && object != nil {
             if keyPath! == "center" && self == object as? EPDeckView {
-                // Initialize the default DeckViewAnimationManager. It may be replaced afterwards.
-                self.deckViewAnimationManager = EPDeckViewAnimationManager(frame: self.frame)
+                
+                if self.allowDeckViewAnimationManagerModify == true {
+                    // Initialize the default DeckViewAnimationManager. It may be replaced afterwards.
+                    self.deckViewAnimationManager = EPDeckViewAnimationManager(frame: self.frame)
+                }
+                
             }
         }
     }
@@ -133,7 +139,7 @@ public class EPDeckView: UIView {
         
         for var i=0; i<self.dataSource?.numberOfCardsInDeckView(self); i++ {
             let cardView: EPCardView = self.dataSource!.deckView(self, cardViewAtIndexPath: i)
-            cardView.center = self.deckViewAnimationManager.deckViewCenter
+            cardView.center = self.deckViewAnimationManager.deckCenter
             cardView.delegate = self
             
             if let rightButton: UIButton = self.delegate?.deckView?(self, rightButtonForIndex: i) {
@@ -232,7 +238,7 @@ public class EPDeckView: UIView {
         var tmpComputedCardAngles: [CGFloat] = []
         
         for (i, _) in self.deck.enumerate() {
-            let tmpCardAngle = CGFloat(i) * self.deckViewAnimationManager.deckViewCardAngleDelta
+            let tmpCardAngle = CGFloat(i) * self.deckViewAnimationManager.deckCardAngleDelta
             tmpComputedCardAngles.append(tmpCardAngle)
         }
         
@@ -265,7 +271,7 @@ public class EPDeckView: UIView {
         var tmpComputedCardAlphas: [CGFloat] = []
         
         for (i, _) in self.deck.enumerate() {
-            var tmpCardAlpha = 1 - CGFloat(i) * self.deckViewAnimationManager.deckViewCardAlphaDelta
+            var tmpCardAlpha = 1 - CGFloat(i) * self.deckViewAnimationManager.deckCardAlphaDelta
             
             if tmpCardAlpha > 1.0 {
                 tmpCardAlpha = 1.0
@@ -275,7 +281,7 @@ public class EPDeckView: UIView {
                 tmpCardAlpha = 0
             }
             
-            if i >= self.deckViewAnimationManager.deckViewMaxVisibleCards {
+            if i >= self.deckViewAnimationManager.deckMaxVisibleCards {
                 tmpCardAlpha = 0
             }
             
@@ -296,7 +302,7 @@ public class EPDeckView: UIView {
         
         for (i, cardView) in self.deck.enumerate() {
             cardView.transform = self.getCardViewTransformForIndex(i)
-            cardView.anchorTo(self.deckViewAnimationManager.deckViewAnchor)
+            cardView.anchorTo(self.deckViewAnimationManager.deckAnchor)
             self.transformedCardCenters.append(cardView.center)
         }
         
@@ -334,7 +340,7 @@ extension EPDeckView: EPCardViewDelegate {
                     continue
                 }
                 
-                let rotationAngle: CGFloat = (self.cardAnglesDegrees[i-1] - self.deckViewAnimationManager.deckViewCardAngleDelta * transformPercentage + self.deckViewAnimationManager.deckViewCardAngleDelta).toRad()
+                let rotationAngle: CGFloat = (self.cardAnglesDegrees[i-1] - self.deckViewAnimationManager.deckCardAngleDelta * transformPercentage + self.deckViewAnimationManager.deckCardAngleDelta).toRad()
                 let rotationAngleTransform: CGAffineTransform = CGAffineTransformMakeRotation(rotationAngle)
                 
                 let scale: CGFloat = self.cardScalePercentages[i] + self.deckViewAnimationManager.deckViewCardScaleDelta * transformPercentage
@@ -363,7 +369,7 @@ extension EPDeckView: EPCardViewDelegate {
             let cardViewsToTransform: [EPCardView] = Array(self.deck.suffixFrom(self.topCardIndex))
             
             for (i, cardViewToTransform) in cardViewsToTransform.enumerate() {
-                UIView.animateWithDuration(self.deckViewAnimationManager.deckViewAnimationDuration,
+                UIView.animateWithDuration(self.deckViewAnimationManager.deckAnimationDuration,
                     delay: 0.0,
                     options: UIViewAnimationOptions.CurveEaseInOut,
                     animations: {
@@ -397,7 +403,7 @@ extension EPDeckView: EPCardViewDelegate {
                 continue
             }
             
-            UIView.animateWithDuration(self.deckViewAnimationManager.deckViewAnimationDuration,
+            UIView.animateWithDuration(self.deckViewAnimationManager.deckAnimationDuration,
                 delay: 0.0,
                 options: UIViewAnimationOptions.CurveEaseInOut,
                 animations: {
@@ -428,7 +434,7 @@ extension EPDeckView: EPCardViewDelegate {
         
         for (i, cardViewToTransform) in cardViewsToTransform.enumerate() {
             
-            UIView.animateWithDuration(self.deckViewAnimationManager.deckViewAnimationDuration,
+            UIView.animateWithDuration(self.deckViewAnimationManager.deckAnimationDuration,
                 delay: 0.0,
                 options: UIViewAnimationOptions.CurveEaseInOut,
                 animations: {

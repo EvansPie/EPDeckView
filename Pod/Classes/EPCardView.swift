@@ -85,7 +85,7 @@ public class EPCardView: UIView {
             let scale: CGFloat = max(1 - fabs(rotationStrength) / (self.delegate as! EPDeckView).deckViewAnimationManager.scaleStrength, (self.delegate as! EPDeckView).deckViewAnimationManager.scaleMax)
             
             // Move the card's center along with the gesure.
-            self.center = CGPointMake((self.delegate as! EPDeckView).deckViewAnimationManager.deckViewCenter.x + xFromCenter, (self.delegate as! EPDeckView).deckViewAnimationManager.deckViewCenter.y + yFromCenter);
+            self.center = CGPointMake((self.delegate as! EPDeckView).deckViewAnimationManager.deckCenter.x + xFromCenter, (self.delegate as! EPDeckView).deckViewAnimationManager.deckCenter.y + yFromCenter);
             
             let angleTransform: CGAffineTransform = CGAffineTransformMakeRotation(rotationAngle)
             let scaleTransform: CGAffineTransform = CGAffineTransformScale(angleTransform, scale, scale)
@@ -113,9 +113,9 @@ public class EPCardView: UIView {
             self.delegate?.cardView(self, afterSwipeMovedTo: .Left)
             
         } else {
-            UIView.animateWithDuration((self.delegate as! EPDeckView).deckViewAnimationManager.deckViewAnimationDuration,
+            UIView.animateWithDuration((self.delegate as! EPDeckView).deckViewAnimationManager.deckAnimationDuration,
                 animations: { finished in
-                    self.center = (self.delegate as! EPDeckView).deckViewAnimationManager.deckViewCenter
+                    self.center = (self.delegate as! EPDeckView).deckViewAnimationManager.deckCenter
                     self.transform = CGAffineTransformMakeRotation(0)
             })
             
@@ -126,7 +126,7 @@ public class EPCardView: UIView {
     func moveToRight(xFromCenter xFromCenter: CGFloat? = nil, yFromCenter: CGFloat? = nil) {
         let finishPoint: CGPoint = (self.delegate as! EPDeckView).deckViewAnimationManager.cardRightFinishPoint
         
-        UIView.animateWithDuration((self.delegate as! EPDeckView).deckViewAnimationManager.deckViewAnimationDuration, animations: {
+        UIView.animateWithDuration((self.delegate as! EPDeckView).deckViewAnimationManager.deckAnimationDuration, animations: {
             self.center = finishPoint
             self.transform = CGAffineTransformMakeRotation(1)
             
@@ -140,7 +140,7 @@ public class EPCardView: UIView {
     func moveToLeft(xFromCenter xFromCenter: CGFloat? = nil, yFromCenter: CGFloat? = nil) {
         let finishPoint: CGPoint = (self.delegate as! EPDeckView).deckViewAnimationManager.cardLeftFinishPoint
         
-        UIView.animateWithDuration((self.delegate as! EPDeckView).deckViewAnimationManager.deckViewAnimationDuration,
+        UIView.animateWithDuration((self.delegate as! EPDeckView).deckViewAnimationManager.deckAnimationDuration,
             animations: {
                 self.center = finishPoint
                 self.transform = CGAffineTransformMakeRotation(1)
@@ -152,9 +152,9 @@ public class EPCardView: UIView {
     }
     
     func moveToCenter() {
-        let finishPoint: CGPoint = (self.delegate as! EPDeckView).deckViewAnimationManager.deckViewCenter
+        let finishPoint: CGPoint = (self.delegate as! EPDeckView).deckViewAnimationManager.deckCenter
         
-        UIView.animateWithDuration((self.delegate as! EPDeckView).deckViewAnimationManager.deckViewAnimationDuration,
+        UIView.animateWithDuration((self.delegate as! EPDeckView).deckViewAnimationManager.deckAnimationDuration,
             animations: {
                 self.center = finishPoint
                 self.transform = CGAffineTransformMakeRotation(0)
