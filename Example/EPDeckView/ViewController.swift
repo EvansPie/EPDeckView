@@ -56,7 +56,7 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
         
         //  scaleMax should received values 0.0 ~> 1.0. It represents the max downscaling that 
         //  is allowed to be applied on the card while being dragged.
-        deckViewAnimationManager.scaleMax = 0.5
+        deckViewAnimationManager.scaleMax = 0.9
         
         //  cardLeftFinishPoint & cardRightFinishPoint represent the points that the card will be 
         //  moved after being dragged, if it's left outside the actionMargin.
@@ -93,7 +93,6 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
         //  EPDeckViewAnimationManager
         self.deckView.deckViewAnimationManager = deckViewAnimationManager
         
-        self.cardViews = []
         self.deckView.reloadCards()
     }
     
