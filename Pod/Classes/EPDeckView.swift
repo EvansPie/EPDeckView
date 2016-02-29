@@ -131,8 +131,8 @@ public class EPDeckView: UIView {
     
     //  The function reloadCards clears the DeckView and reloads the cards. It works as UITableView's reload data.
     public func reloadCards() {
-        for subview in self.subviews {
-            subview.removeFromSuperview()
+        for card in self.deck {
+            card.removeFromSuperview()
         }
         
         self.deck = []
