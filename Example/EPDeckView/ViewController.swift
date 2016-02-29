@@ -11,7 +11,6 @@ import EPDeckView
 
 class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate {
     
-    //private var deckView: EPDeckView!
     private var cardViews: [EPCardView] = []
     @IBOutlet weak var deckView: EPDeckView!
     
@@ -19,11 +18,10 @@ class ViewController: UIViewController, EPDeckViewDataSource, EPDeckViewDelegate
     //  MARK: - INITIALIZATION
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Set the deckView's delegate & data source.
         self.deckView.delegate = self
         self.deckView.dataSource = self
-        
     }
     
     override func viewDidAppear(animated: Bool) {
