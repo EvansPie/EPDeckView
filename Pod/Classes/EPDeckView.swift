@@ -230,7 +230,7 @@ public class EPDeckView: UIView {
         var tmpComputedCardScalePercentages: [CGFloat] = []
         
         for (i, _) in self.deck.enumerate() {
-            var tmpCardScale = 1 - CGFloat(i+1) * self.deckViewAnimationManager.deckViewCardScaleDelta
+            var tmpCardScale = 1 - CGFloat(i) * self.deckViewAnimationManager.deckViewCardScaleDelta
             
             if tmpCardScale > 1.0 {
                 tmpCardScale = 1.0
