@@ -135,6 +135,10 @@ public class EPDeckView: UIView {
             card.removeFromSuperview()
         }
         
+        if self.deckViewAnimationManager == nil {
+            self.deckViewAnimationManager = EPDeckViewAnimationManager(frame: self.frame)
+        }
+        
         self.deck = []
         
         for var i=0; i<self.dataSource?.numberOfCardsInDeckView(self); i++ {
