@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "EPDeckView"
   s.version          = "0.1.0"
-  s.summary          = "EPDeckView` is an easy-to-use Swift library that provides a deck of views that can be swiped or thrown left/right (inspired by the Tinder app)."
+  s.summary          = "EPDeckView is an easy-to-use library that provides a deck of views that can be swiped or thrown left/right (inspired by the Tinder app)."
 
   s.description      = <<-DESC
 EPDeckView is inspired by the Tinder app and provides its core functionality, while it's easy to customize it. You can swipe the cards of the deck left/right or throw them with a button click.
