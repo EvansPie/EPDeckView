@@ -125,13 +125,11 @@ public class EPDeckView: UIView {
             if let rightButton: UIButton = self.delegate?.deckView?(self, rightButtonForIndex: i) {
                 rightButton.tag = i
                 rightButton.addTarget(self, action: Selector("rightButtonTapped:"), forControlEvents: .TouchUpInside)
-                cardView.addSubview(rightButton)
             }
             
             if let leftButton: UIButton = self.delegate?.deckView?(self, leftButtonForIndex: i) {
                 leftButton.tag = i
                 leftButton.addTarget(self, action: Selector("leftButtonTapped:"), forControlEvents: .TouchUpInside)
-                cardView.addSubview(leftButton)
             }
             
             self.deck.append(cardView)

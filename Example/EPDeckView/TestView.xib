@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestView" customModule="EPDeckView_Example" customModuleProvider="target">
             <connections>
+                <outlet property="cancelButton" destination="4jd-aB-c7W" id="H3y-1X-gm0"/>
+                <outlet property="checkButton" destination="iWW-u5-SAE" id="vQ6-Q3-AFi"/>
                 <outlet property="displayNameLabel" destination="cSb-QS-pqA" id="zrk-09-Rr2"/>
                 <outlet property="profileImageView" destination="YuX-Vy-xWR" id="Tg7-5v-rlm"/>
             </connections>
@@ -35,6 +37,14 @@
                     <color key="textColor" red="0.35294117650000001" green="0.71764705880000002" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jd-aB-c7W">
+                    <rect key="frame" x="51" y="186" width="23" height="23"/>
+                    <state key="normal" image="CancelBTN"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iWW-u5-SAE">
+                    <rect key="frame" x="166" y="186" width="23" height="23"/>
+                    <state key="normal" image="DoneBTN"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
@@ -46,6 +56,8 @@
         </view>
     </objects>
     <resources>
+        <image name="CancelBTN" width="23" height="23"/>
+        <image name="DoneBTN" width="30" height="27"/>
         <image name="alice" width="468" height="468"/>
     </resources>
 </document>
