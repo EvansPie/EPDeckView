@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "EPDeckView"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "EPDeckView is an easy-to-use library that provides a deck of views that can be swiped or thrown left/right (inspired by the Tinder app)."
 
   s.description      = <<-DESC

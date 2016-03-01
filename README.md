@@ -6,6 +6,8 @@
 [![License](https://img.shields.io/cocoapods/l/EPDeckView.svg?style=flat)](http://cocoapods.org/pods/EPDeckView)
 [![Platform](https://img.shields.io/cocoapods/p/EPDeckView.svg?style=flat)](http://cocoapods.org/pods/EPDeckView)
 
+![EPDeckView](https://github.com/EvansPie/EPDeckView/blob/master/demo.gif)
+
 
 ## Requirements
 
@@ -22,7 +24,7 @@ Clone this repo and manually add the source files to project.
 ### CocoaPods
 If you are using [CocoaPods](https://cocoapods.org) just add in your podfile:
 
-`pod 'EPDeckView', '~> 0.1.0'`
+`pod 'EPDeckView', :git => 'https://github.com/EvansPie/EPDeckView.git'`
 
 
 ## Usage
